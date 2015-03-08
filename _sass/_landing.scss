@@ -21,6 +21,10 @@
                 color: rgba(255,255,255,.5);
                 text-shadow: 0 0 10px rgba(0,0,0,.4);
             }
+
+            @media screen and (max-width: 640px) {
+                font-size: 67px;
+            }
         }
     }
 
