@@ -1,11 +1,7 @@
 ---
 layout: page
-title: About
+title: このサイトについて
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+フロアで出会う、新しい自分 --- つくば市内でクラブイベントを行う団体「IMAGINE THE FLOOR.」の公式サイトです。クラブ初心者の人が気軽に足を運べるイベントです。好評につき定期イベントに昇格しました。

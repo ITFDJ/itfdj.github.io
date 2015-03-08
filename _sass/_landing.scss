@@ -1,0 +1,30 @@
+.landing {
+    background: url(/images/laser.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 700px;
+    padding-top: 60px;
+
+    h1 {
+        margin-bottom: 3.5em;
+
+        a {
+            font-family: Roboto, sans-serif;
+            font-size: 90px;
+            font-weight: 900;
+            color: rgba(255,255,255,.3);
+            text-shadow: 0 0 7px rgba(0,0,0,.2);
+            line-height: 1;
+            text-decoration: none;
+            transition: color .4s ease 0s, text-shadow .3s ease .2s;
+
+            &:hover {
+                color: rgba(255,255,255,.5);
+                text-shadow: 0 0 10px rgba(0,0,0,.4);
+            }
+        }
+    }
+
+    .heading-container {
+        text-shadow: 0 0 4px rgba(0,0,0,.4);
+    }
+}
