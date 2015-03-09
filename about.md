@@ -1,6 +1,6 @@
 ---
 layout: page
-title: このサイトについて
+title: IMAGINE THE FLOOR. について
 permalink: /about/
 ---
 
