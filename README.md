@@ -9,4 +9,4 @@ $ jekyll serve # or jekyll serve --watch
 
 ## License
 
-All photos under this site is copyrighted.
+All photos under this site are copyrighted.
