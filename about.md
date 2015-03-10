@@ -27,3 +27,9 @@ permalink: /about/
 <a class="twitter-timeline" href="https://twitter.com/hashtag/ITF_DJ" data-widget-id="574971387170852864">#ITF_DJ のツイート</a>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+# USTREAM チャンネル
+
+[IMAGINE THE FLOOR.](http://www.ustream.tv/channel/itf-dj)
+
+<iframe width="480" height="302" src="http://www.ustream.tv/embed/17417671?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
