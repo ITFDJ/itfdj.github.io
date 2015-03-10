@@ -1,7 +1,7 @@
 # Site settings
 title: IMAGINE THE FLOOR.
 description: > # this means to ignore newlines until "baseurl:"
-  筑波大生を主体として、つくば市で定期的に開催されているクラブイベント IMAGINE THE FLOOR. の公式サイトです。
+  つくば市のクラブ OctBaSS で定期的に開催されているイベント IMAGINE THE FLOOR. の公式サイトです。
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://itfdj.github.io" # the base hostname & protocol for your site
 twitter_username: ITF_DJ
