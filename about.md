@@ -31,5 +31,3 @@ permalink: /about/
 # USTREAM チャンネル
 
 [IMAGINE THE FLOOR.](http://www.ustream.tv/channel/itf-dj)
-
-<iframe width="480" height="302" src="http://www.ustream.tv/embed/17417671?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
