@@ -30,4 +30,4 @@ permalink: /about/
 
 # USTREAM チャンネル
 
-[IMAGINE THE FLOOR.](http://www.ustream.tv/channel/itf-dj)
+[USTREAM: IMAGINE THE FLOOR.](http://www.ustream.tv/channel/itf-dj)
