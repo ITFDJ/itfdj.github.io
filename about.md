@@ -1,6 +1,6 @@
 ---
 layout: page
-title: IMAGINE THE FLOOR. について
+title: IMAGINE THE FLOOR. &#35;ITF_DJ について
 permalink: /about/
 ---
 
