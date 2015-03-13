@@ -8,11 +8,11 @@ permalink: /about/
 
 # 過去の開催
 
-- [vol.1 (2014年3月30日)](http://twipla.jp/events/79813)
-- [vol.2 (2014年6月15日)](http://twipla.jp/events/89668)
-- [vol.3 (2014年9月28日)](http://twipla.jp/events/103363)
-- [vol.4 (2014年12月7日)](http://twipla.jp/events/115087)
-- [vol.5 (2015年3月8日)](http://twipla.jp/events/126062)
+- [vol.1 (2014年3月30日)](/archives/vol_1.html)
+- [vol.2 (2014年6月15日)](/archives/vol_2.html)
+- [vol.3 (2014年9月28日)](/archives/vol_3.html)
+- [vol.4 (2014年12月7日)](/archives/vol_4.html)
+- [vol.5 (2015年3月8日)](/archives/vol_5.html)
 
 # 公式 Twitter アカウント
 
