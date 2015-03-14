@@ -6,13 +6,19 @@ permalink: /about/
 
 フロアで出会う、新しい自分 --- つくば市内でクラブイベントを行う団体「IMAGINE THE FLOOR.」の公式サイトです。クラブ初心者の人が気軽に足を運べるイベントです。好評につき定期イベントに昇格しました。
 
+# 開催予定
+
+- vol.6 (6月頃を予定)
+
 # 過去の開催
 
-- [vol.1 (2014年3月30日)](/archives/vol_1.html)
-- [vol.2 (2014年6月15日)](/archives/vol_2.html)
-- [vol.3 (2014年9月28日)](/archives/vol_3.html)
-- [vol.4 (2014年12月7日)](/archives/vol_4.html)
+TwiPla やアップロードされた mix へのリンクをまとめています。
+
 - [vol.5 (2015年3月8日)](/archives/vol_5.html)
+- [vol.4 (2014年12月7日)](/archives/vol_4.html)
+- [vol.3 (2014年9月28日)](/archives/vol_3.html)
+- [vol.2 (2014年6月15日)](/archives/vol_2.html)
+- [vol.1 (2014年3月30日)](/archives/vol_1.html)
 
 # 公式 Twitter アカウント
 
