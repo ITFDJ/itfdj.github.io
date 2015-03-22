@@ -37,3 +37,16 @@ TwiPla やアップロードされた mix へのリンクをまとめていま�
 # USTREAM チャンネル
 
 [USTREAM: IMAGINE THE FLOOR.](http://www.ustream.tv/channel/itf-dj)
+
+# Facebook ページ
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like-box" data-href="https://www.facebook.com/pages/IMAGINE-THE-FLOOR/327942300690291" data-colorscheme="dark" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
