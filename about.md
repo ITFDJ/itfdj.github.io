@@ -8,7 +8,7 @@ permalink: /about/
 
 # 開催予定
 
-- vol.6 (6月頃を予定)
+- [vol.6 (2015年6月14日 (日))](http://twipla.jp/events/142648)
 
 # 過去の開催
 
