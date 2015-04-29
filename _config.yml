@@ -8,3 +8,4 @@ twitter_username: ITF_DJ
 
 # Build settings
 markdown: kramdown
+exclude: ["vendor"]
