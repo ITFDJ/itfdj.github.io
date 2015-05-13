@@ -8,4 +8,6 @@ twitter_username: ITF_DJ
 
 # Build settings
 markdown: kramdown
+redcarpet:
+  extensions: ["strikethrough"]
 exclude: ["vendor"]
