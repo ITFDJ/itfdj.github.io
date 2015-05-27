@@ -4,6 +4,16 @@
     min-height: 700px;
     padding-top: 60px;
 
+    .upcoming {
+        margin-bottom: 5em;
+        opacity: .6;
+        transition: all .6s ease 0s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
     h1 {
         margin-bottom: 3.5em;
 
