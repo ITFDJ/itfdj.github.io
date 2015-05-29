@@ -1,48 +1,70 @@
 .landing {
-    background: url(/images/laser.jpg) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 700px;
-    padding-top: 60px;
+  background: #00A8CC;
+  background-size: cover;
+  min-height: 700px;
+  padding-top: 60px;
 
-    .upcoming {
-        margin-bottom: 5em;
-        opacity: .6;
-        transition: all .6s ease 0s;
+  .left {
+    float: left;
+    width: 400px;
+    padding-bottom: 3em;
 
-        &:hover {
-            opacity: 1;
-        }
+    .post-meta {
+      color: #ddd;
     }
 
-    h1 {
-        margin-bottom: 3.5em;
-
-        a {
-            font-family: Roboto, sans-serif;
-            font-size: 90px;
-            font-weight: 900;
-            color: rgba(255,255,255,.3);
-            text-shadow: 0 0 7px rgba(0,0,0,.2);
-            line-height: 1;
-            text-decoration: none;
-            transition: color .4s ease 0s, text-shadow .4s ease 0s;
-
-            &:hover {
-                color: rgba(255,255,255,.5);
-                text-shadow: none;
-            }
-
-            @media screen and (max-width: 640px) {
-                font-size: 67px;
-            }
-        }
+    @media screen and (max-width: 640px) {
+      width: 100%
     }
+  }
 
-    .heading-container {
-        text-shadow: 0 0 4px rgba(0,0,0,.4);
-    }
+  .right {
+    margin-left: 450px;
+    position: fixed;
+    width: 240px;
 
-    .social-buttons {
-        margin-top: 3em;
+    @media screen and (max-width: 640px) {
+      margin-left: 0;
+      position: relative;
+      width: 100%;
     }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .upcoming {
+    margin-bottom: 5em;
+    opacity: .6;
+    transition: all .6s ease 0s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    a {
+      font-family: Roboto, sans-serif;
+      font-size: 70px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      text-decoration: none;
+      transition: all .4s ease 0s;
+
+      &:hover {
+        text-shadow: 0 0 4px rgba(255,255,255,.9);
+      }
+    }
+  }
+
+  .heading-container {
+    text-shadow: 0 0 4px rgba(0,0,0,.4);
+  }
+
+  .social-buttons {
+    margin-top: 3em;
+  }
 }

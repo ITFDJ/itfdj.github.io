@@ -19,14 +19,18 @@
 
     <div class="landing">
       <div class="wrapper">
-        <h1>
-          <a href="/about/">IMAGINE<br>THE<br>FLOOR.</a>
-        </h1>
-        {{ content }}
+        <div class="right">
+          <h1>
+            <a href="/about/">IMAGINE<br>THE<br>FLOOR.</a>
+          </h1>
+          <a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">IMAGINE THE FLOOR. について</a>
+          {% include social_buttons.html %}
+        </div>
+        <div class="left">
+          {{ content }}
+        </div>
       </div>
     </div>
-
-    {% include footer.html %}
 
   </body>
 
