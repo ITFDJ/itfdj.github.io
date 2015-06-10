@@ -4,13 +4,16 @@ title: IMAGINE THE FLOOR. &#35;ITF_DJ について
 permalink: /about/
 ---
 
-フロアで出会う、新しい自分 --- つくば市の天久保1丁目にあるクラブ [OctBaSS](https://twitter.com/octbass_tsukuba) でイベントを行う団体「IMAGINE THE FLOOR.」の公式サイトです。クラブ初心者の人が気軽に足を運べるイベントです。好評につき定期イベントに昇格しました。
+フロアで出会う、新しい自分 --- つくば市の天久保1丁目にあるクラブ [OctBaSS](https://twitter.com/octbass_tsukuba) でイベントを行う団体「**IMAGINE THE FLOOR.**」の公式サイトです。クラブ初心者の人が気軽に足を運べるイベントです。好評につき定期イベントに昇格しました。
+
+番外編イベントとして、つくば市天久保3丁目のピザ屋さん [ピッツェリア レガーメ](http://www.pizzerialegame.com/) にて「**IMAGINE THE PIZZA. #ITP_DJ**」も行っています。
 
 <div class="upcoming" markdown="1">
 
 # 開催予定
 
 - [vol.6 (2015年6月14日 (日))](http://twipla.jp/events/142648)
+- [IMAGINE THE PIZZA. vol.2 (2015年7月10日 (金))](http://twipla.jp/events/147838)
 
 </div>
 
@@ -21,6 +24,7 @@ permalink: /about/
 TwiPla やアップロードされた mix へのリンクをまとめています。
 
 - [vol.5 (2015年3月8日)](/archives/vol_5.html)
+- [IMAGINE THE PIZZA. (2015年1月16日)](/archives/itp_dj/vol_1.html)
 - [vol.4 (2014年12月7日)](/archives/vol_4.html)
 - [vol.3 (2014年9月28日)](/archives/vol_3.html)
 - [vol.2 (2014年6月15日)](/archives/vol_2.html)
