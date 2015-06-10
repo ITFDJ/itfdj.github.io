@@ -6,9 +6,15 @@ permalink: /about/
 
 フロアで出会う、新しい自分 --- つくば市の天久保1丁目にあるクラブ [OctBaSS](https://twitter.com/octbass_tsukuba) でイベントを行う団体「IMAGINE THE FLOOR.」の公式サイトです。クラブ初心者の人が気軽に足を運べるイベントです。好評につき定期イベントに昇格しました。
 
+<div class="upcoming" markdown="1">
+
 # 開催予定
 
 - [vol.6 (2015年6月14日 (日))](http://twipla.jp/events/142648)
+
+</div>
+
+<div class="archives" markdown="1">
 
 # 過去の開催
 
@@ -19,6 +25,8 @@ TwiPla やアップロードされた mix へのリンクをまとめていま�
 - [vol.3 (2014年9月28日)](/archives/vol_3.html)
 - [vol.2 (2014年6月15日)](/archives/vol_2.html)
 - [vol.1 (2014年3月30日)](/archives/vol_1.html)
+
+</div>
 
 # 公式 Twitter アカウント
 
