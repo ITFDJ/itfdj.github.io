@@ -13,7 +13,6 @@ permalink: /about/
 
 # 開催予定
 
-- [vol.6 (2015年6月14日 (日))](http://twipla.jp/events/142648)
 - [IMAGINE THE PIZZA. vol.2 (2015年7月10日 (金))](http://twipla.jp/events/147838)
 
 </div>
@@ -24,6 +23,7 @@ permalink: /about/
 
 TwiPla やアップロードされた mix へのリンクをまとめています。
 
+- [vol.6 (2015年6月14日)](/archives/vol_6.html)
 - [vol.5 (2015年3月8日)](/archives/vol_5.html)
 - [IMAGINE THE PIZZA. (2015年1月16日)](/archives/itp_dj/vol_1.html)
 - [vol.4 (2014年12月7日)](/archives/vol_4.html)
