@@ -1,6 +1,22 @@
-.landing {
+.landing-body {
   background: #00A8CC;
-  background-size: cover;
+}
+
+.background-movie {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.landing {
+  background-color: rgba(0,0,0,.5);
   min-height: 700px;
   padding-top: 60px;
 
