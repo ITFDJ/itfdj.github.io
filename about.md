@@ -33,25 +33,29 @@ TwiPla やアップロードされた mix へのリンクをまとめていま�
 
 </div>
 
-# 公式 Twitter アカウント
+## Twitter
 
-[@ITF_DJ](https://twitter.com/ITF_DJ)
+### 公式アカウント [@ITF_DJ](https://twitter.com/ITF_DJ)
 
 <a class="twitter-timeline" href="https://twitter.com/ITF_DJ" data-widget-id="574970988124762112">@ITF_DJさんのツイート</a>
 
-# ハッシュタグ
+### ハッシュタグ
 
 [#ITF_DJ](https://twitter.com/search?q=%23ITF_DJ)
 
 <a class="twitter-timeline" href="https://twitter.com/hashtag/ITF_DJ" data-widget-id="574971387170852864">#ITF_DJ のツイート</a>
 
+関連: [#ITP_DJ](https://twitter.com/search?q=%23ITF_DJ)
+
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/ITP_DJ" data-widget-id="617877195332018177">#ITP_DJ のツイート</a>
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-# USTREAM チャンネル
+## USTREAM チャンネル
 
 [USTREAM: IMAGINE THE FLOOR.](http://www.ustream.tv/channel/itf-dj)
 
-# Facebook ページ
+## Facebook ページ
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
