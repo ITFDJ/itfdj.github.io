@@ -21,7 +21,7 @@ permalink: /about/
 
 # 過去の開催
 
-TwiPla やアップロードされた mix へのリンクをまとめています。
+TwiPla やアップロードされた mix などへのリンクをまとめています。
 
 - [IMAGINE THE PIZZA. vol.2 (2015年7月10日)](/archives/itp_dj/vol_2.html)
 - [vol.6 (2015年6月14日)](/archives/vol_6.html)
