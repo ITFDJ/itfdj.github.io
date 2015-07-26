@@ -13,7 +13,7 @@ permalink: /about/
 
 # 開催予定
 
-- vol.7 (2015年9月下旬予定)
+- [vol.7 (2015年9月27日 (日))](http://twipla.jp/events/157179)
 
 </div>
 
