@@ -39,6 +39,36 @@
     position: fixed;
     width: 260px;
 
+    h1 {
+      a {
+        img {
+          opacity: .8;
+          transform: rotate(10deg);
+          transition: opacity .3s ease 0s;
+          max-width: 88%;
+
+          &:hover {
+            opacity: 1;
+            animation: scratch .5s ease 0s 1;
+
+            @keyframes scratch {
+              0% { transform: rotate(10deg); }
+              20% { transform: rotate(20deg); }
+              40% { transform: rotate(-4deg); }
+              60% { transform: rotate(12deg); }
+              80% { transform: rotate(-8deg); }
+              100% { transform: rotate(10deg); }
+            }
+          }
+
+          @media screen and (max-width: 640px) {
+            max-width: 60%;
+            text-align: right;
+          }
+        }
+      }
+    }
+
     @media screen and (max-width: 640px) {
       margin-bottom: 3em;
       margin-left: 0;
@@ -91,6 +121,7 @@
     a {
       opacity: .6;
       transition: all .4s ease 0s;
+      text-decoration: none;
 
 
       &:hover {
@@ -100,6 +131,11 @@
       img {
         margin-bottom: .2em;
         width: 31%;
+        transition: transform .15s ease 0s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
 
         @media screen and (max-width: 640px) {
           width: 47%
