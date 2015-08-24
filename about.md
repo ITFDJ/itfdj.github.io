@@ -9,6 +9,8 @@ permalink: /about/
 
 番外編イベントとして、つくば市天久保3丁目のピザ屋さん [ピッツェリア レガーメ](http://www.pizzerialegame.com/) にて「**IMAGINE THE PIZZA. #ITP_DJ**」も行っています。
 
+
+
 <div class="upcoming" markdown="1">
 
 # 開催予定
