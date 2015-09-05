@@ -25,6 +25,25 @@
     width: 400px;
     padding-bottom: 3em;
 
+    .upcoming {
+      color: #E87278;
+      .next-date-indicator {
+
+      }
+
+      .next-date {
+        .year {
+          font-size: .9em;
+        }
+        .month {
+          font-size: 1.3em;
+        }
+        .day {
+          font-size: 1.3em;
+        }
+      }
+    }
+
     h2 {
       color: #ccc;
     }
