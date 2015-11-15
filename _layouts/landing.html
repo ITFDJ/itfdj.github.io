@@ -6,10 +6,18 @@
   <body class="landing-body">
 
     <div class="landing">
-      <video autoplay loop class="background-movie">
+      <video autoplay loop class="background-movie" id="background-movie">
         <source src="movies/background.webm" type="video/webm">
         <source src="movies/background.mp4" type="video/mp4">
       </video>
+
+      <script>
+        // force to play background-movie on mobile devices
+        document.body.addEventListener("click", function() {
+          document.getElementById("background-movie").play();
+          this.removeEventListener("click", arguments.callee);
+        });
+      </script>
 
       <div class="wrapper">
         <div class="right">
