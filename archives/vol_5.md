@@ -5,7 +5,7 @@ title: IMAGINE THE FLOOR. vol.5
 
 [IMAGINE THE FLOOR. vol.5（1周年！！） #ITF_DJ - TwiPla](http://twipla.jp/events/126062)
 
-![flyer](/images/flyers/vol_5.jpg)
+![flyer](/images/flyers/vol_5.png)
 
 # Mix
 
