@@ -25,8 +25,17 @@
     width: 400px;
     padding-bottom: 3em;
 
-    .upcoming {
-      color: #E87278;
+    .upcoming a {
+      color: #000;
+      text-decoration: none;
+      text-shadow: none;
+
+      .next-date-wrapper {
+        background: #fff;
+        padding: .2em .2em .1em .2em;
+        display: inline;
+      }
+
       .next-date-indicator {
 
       }
