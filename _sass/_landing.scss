@@ -2,17 +2,34 @@
   background: #010001;
 }
 
-.background-movie {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+.background-image {
+  background: url(/images/background.png);
+
+  background-size: cover;
+  background-position: center center;
+  background-attachment: cover;
+}
+
+.background-cover {
+
+  .background-movie {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    @media (max-width: 1024px) {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
 }
 
 .landing {
