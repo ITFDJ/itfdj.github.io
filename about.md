@@ -15,7 +15,7 @@ permalink: /about/
 
 # 開催予定
 
-- vol.8 (2015年12月予定)
+- [vol.8 (2016年1月17日 (日) 午後)](http://twipla.jp/events/175572)
 
 </div>
 
