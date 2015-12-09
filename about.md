@@ -9,8 +9,6 @@ permalink: /about/
 
 番外編イベントとして、つくば市天久保3丁目のピザ屋さん [ピッツェリア レガーメ](http://www.pizzerialegame.com/) にて「**IMAGINE THE PIZZA. #ITP_DJ**」も行っています。
 
-
-
 <div class="upcoming" markdown="1">
 
 # 開催予定
@@ -25,7 +23,7 @@ permalink: /about/
 
 TwiPla やアップロードされた mix などへのリンクをまとめています。
 
-- [vol.7 (2015年9月27日 (日))](/archives/vol_7.html)
+- [vol.7 (2015年9月27日)](/archives/vol_7.html)
 - [IMAGINE THE PIZZA. vol.2 (2015年7月10日)](/archives/itp_dj/vol_2.html)
 - [vol.6 (2015年6月14日)](/archives/vol_6.html)
 - [vol.5 (2015年3月8日)](/archives/vol_5.html)
@@ -39,13 +37,11 @@ TwiPla やアップロードされた mix などへのリンクをまとめて�
 
 ## Twitter
 
-### 公式アカウント [@ITF_DJ](https://twitter.com/ITF_DJ)
+### 公式アカウント: [@ITF_DJ](https://twitter.com/ITF_DJ)
 
 <a class="twitter-timeline" href="https://twitter.com/ITF_DJ" data-widget-id="574970988124762112">@ITF_DJさんのツイート</a>
 
-### ハッシュタグ
-
-[#ITF_DJ](https://twitter.com/search?q=%23ITF_DJ)
+### ハッシュタグ: [#ITF_DJ](https://twitter.com/search?q=%23ITF_DJ)
 
 <a class="twitter-timeline" href="https://twitter.com/hashtag/ITF_DJ" data-widget-id="574971387170852864">#ITF_DJ のツイート</a>
 
