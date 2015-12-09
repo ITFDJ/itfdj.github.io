@@ -45,8 +45,25 @@
   padding-bottom: $spacing-unit;
   font-size: .8em;
 
-  .page-link {
-    font-size: 1.1em;
+  .footer-link-list {
+    margin: 0;
+    line-height: 1.75;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      font-size: 1.1em;
+
+      &:not(:first-child):before {
+        content: ' || ';
+        opacity: .5;
+      }
+
+      @media screen and (max-width: 640px) {
+        display: block;
+        &:not(:first-child):before { content: none; }
+      }
+    }
   }
 }
 

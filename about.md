@@ -4,6 +4,10 @@ title: IMAGINE THE FLOOR. &#35;ITF_DJ について
 permalink: /about/
 ---
 
+<div class="center" markdown="1">
+[![IMAGINE THE FLOOR. の遊び方](/images/howtoitf_header.png)](/howtoitf.html)
+</div>
+
 フロアで出会う、新しい自分 --- つくば市天久保1丁目のクラブ [OctBaSS](https://twitter.com/octbass_tsukuba) でイベントを行う団体「**IMAGINE THE FLOOR.**」の公式サイトです。
 クラブ初心者の人が気軽に足を運べるイベントです。好評につき定期イベントに昇格しました。
 

@@ -5,7 +5,7 @@ title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
 
 <div class="heading-container">
 
-  <div class="upcoming">
+  <div class="heading-section upcoming">
     <a href="/about">
       <span class="next-date-wrapper">
         <span class="next-date-indicator">Upcoming:</span>
@@ -19,11 +19,18 @@ title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
     </a>
   </div>
 
-  {% include posts.html %}
+  <div class="heading-section howtoitf-banner">
+    <a href="/howtoitf.html">
+      <img src="{{ "/images/howtoitf_header.png" | prepend: site.baseurl }}" alt="ITF_DJ の遊び方">
+    </a>
+  </div>
 
-  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS フィードで購読 ...</a></p>
+  <div class="heading-section">
+    {% include posts.html %}
+    <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS フィードで購読 ...</a></p>
+  </div>
 
-  <div class="archives">
+  <div class="heading-section archives">
     <h2 class="page-heading">過去の開催</h1>
 
     <a href="{{ "/archives/vol_1.html" | prepend: site.baseurl }}">

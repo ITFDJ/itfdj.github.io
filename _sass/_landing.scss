@@ -130,14 +130,21 @@
     color: #fff;
   }
 
-  .upcoming {
-    margin-bottom: 5em;
-    opacity: .6;
-    transition: all .6s ease 0s;
+  img {
+    opacity: .7;
+    transition: opacity .6s ease 0s;
+
+    @media screen and (max-width: 640px) {
+      opacity: .8;
+    }
 
     &:hover {
       opacity: 1;
     }
+  }
+
+  .heading-section + .heading-section {
+    margin-top: 3.5em;
   }
 
   h1 {
