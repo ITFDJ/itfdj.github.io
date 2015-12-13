@@ -16,10 +16,14 @@
   img {
     width: 500px;
     max-width: 40%;
-    animation: turntable 1.800180018s linear 0s infinite; // 33 + 1/3 per minute
+    animation: turntable-start 3s ease-in 0s 1, turntable 1.800180018s linear 3s infinite; // 33 + 1/3 per minute
     transition: opacity .3s ease 0s;
     opacity: .6;
 
+    @keyframes turntable-start {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
     @keyframes turntable {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
