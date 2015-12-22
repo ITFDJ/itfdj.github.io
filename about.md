@@ -71,3 +71,7 @@ TwiPla やアップロードされた mix などへのリンクをまとめて�
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="fb-like-box" data-href="https://www.facebook.com/pages/IMAGINE-THE-FLOOR/327942300690291" data-colorscheme="dark" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
+
+## パーティフォト
+
+[![パーティフォト](/images/pf_banner.jpg)](/photo.html)
