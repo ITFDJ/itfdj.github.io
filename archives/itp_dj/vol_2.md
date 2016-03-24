@@ -5,6 +5,8 @@ title: IMAGINE THE PIZZA. vol.2 &#35;ITP_DJ
 
 [IMAGINE THE PIZZA. vol.2 - TwiPla](http://twipla.jp/events/147838)
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">ピザ屋に結構ガチなDVJブースできてるのほんと笑う <a href="https://twitter.com/hashtag/ITP_DJ?src=hash">#ITP_DJ</a> <a href="http://t.co/JlDUZuLpGo">pic.twitter.com/JlDUZuLpGo</a></p>&mdash; こまいぬ㌠ M3 F-04b (@km1n_st3) <a href="https://twitter.com/km1n_st3/status/619450779225567233">July 10, 2015</a></blockquote>
+
 # Mix
 
 <blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">履歴ほじくりました <a href="http://t.co/CLNjcGWUSr">pic.twitter.com/CLNjcGWUSr</a></p>&mdash; ゛ (@ONI_37) <a href="https://twitter.com/ONI_37/status/619536461738606593">2015, 7月 10</a></blockquote>
