@@ -66,12 +66,12 @@
     opacity: .4;
     z-index: -1000;
 
-    transform: scale(1.2);
+    @include transform(scale(1.2));
 
     @include filter(blur(10px));
 
     @media screen and (max-width: 640px) {
-      transform: scale(2.0);
+      @include transform(scale(2.0));
     }
   }
 }
