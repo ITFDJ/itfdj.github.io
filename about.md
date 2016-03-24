@@ -17,7 +17,7 @@ permalink: /about/
 
 # 開催予定
 
-- [vol.8 (2016年1月17日 (日) 午後)](http://twipla.jp/events/175572)
+- [{{ site.events.upcoming.name }} ({{ site.events.upcoming.date | date: "%Y-%m-%d" }})]({{ site.events.upcoming.url }})
 
 </div>
 
@@ -27,15 +27,8 @@ permalink: /about/
 
 TwiPla やアップロードされた mix などへのリンクをまとめています。
 
-- [vol.7 (2015年9月27日)](/archives/vol_7.html)
-- [IMAGINE THE PIZZA. vol.2 (2015年7月10日)](/archives/itp_dj/vol_2.html)
-- [vol.6 (2015年6月14日)](/archives/vol_6.html)
-- [vol.5 (2015年3月8日)](/archives/vol_5.html)
-- [IMAGINE THE PIZZA. (2015年1月16日)](/archives/itp_dj/vol_1.html)
-- [vol.4 (2014年12月7日)](/archives/vol_4.html)
-- [vol.3 (2014年9月28日)](/archives/vol_3.html)
-- [vol.2 (2014年6月15日)](/archives/vol_2.html)
-- [vol.1 (2014年3月30日)](/archives/vol_1.html)
+{% for ev in site.events.archives reversed %}
+- [{{ ev.name }} ({{ ev.date | date: "%Y-%m-%d" }})]({{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}){% endfor %}
 
 </div>
 

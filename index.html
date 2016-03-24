@@ -10,12 +10,12 @@ title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
       <span class="next-date-wrapper">
         <span class="next-date-indicator">Upcoming:</span>
         <time class="next-date">
-          <span class="year">2016</span><span class="time-separator">.</span><span class="month">01</span><span class="time-separator">.</span><span class="day">17</span>
+          <span class="year">{{ site.events.upcoming.date | date: "%Y" }}</span><span class="time-separator">-</span><span class="month">{{ site.events.upcoming.date | date: "%m" }}</span><span class="time-separator">-</span><span class="day">{{ site.events.upcoming.date | date: "%d" }}</span>
         </time>
-        <span class="next-date-outline">(vol. 8)</span>
+        <span class="next-date-outline">({{ site.events.upcoming.name }})</span>
       </span>
 
-      <img src="/images/flyers/vol_8.png" alt="vol.8 flyer">
+      <img src="/images/flyers/vol_9.jpg" alt="vol.9 flyer">
     </a>
   </div>
 
@@ -31,35 +31,23 @@ title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
     </a>
   </div>
 
-  <div class="heading-section">
-    {% include posts.html %}
-    <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS フィードで購読 ...</a></p>
+  <div class="heading-section archives">
+    <h2 class="page-heading">過去の開催</h2>
+    <ul class="event-archives">
+      {% for ev in site.events.archives %}
+      <li class="event-archive-wrapper">
+        <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}">
+          <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
+          <span class="event-archive-name">{{ ev.name }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 
-  <div class="heading-section archives">
-    <h2 class="page-heading">過去の開催</h1>
-
-    <a href="{{ "/archives/vol_1.html" | prepend: site.baseurl }}">
-      <img src="{{ "/images/flyers/vol_1.png" | prepend: site.baseurl }}" alt="vol.1 flyer">
-    </a>
-    <a href="{{ "/archives/vol_2.html" | prepend: site.baseurl }}">
-      <img src="{{ "/images/flyers/vol_2.png" | prepend: site.baseurl }}" alt="vol.2 flyer">
-    </a>
-    <a href="{{ "/archives/vol_3.html" | prepend: site.baseurl }}">
-      <img src="{{ "/images/flyers/vol_3.png" | prepend: site.baseurl }}" alt="vol.3 flyer">
-    </a>
-    <a href="{{ "/archives/vol_4.html" | prepend: site.baseurl }}">
-      <img src="{{ "/images/flyers/vol_4.png" | prepend: site.baseurl }}" alt="vol.4 flyer">
-    </a>
-    <a href="{{ "/archives/vol_5.html" | prepend: site.baseurl }}">
-      <img src="{{ "/images/flyers/vol_5.png" | prepend: site.baseurl }}" alt="vol.5 flyer">
-    </a>
-    <a href="{{ "/archives/vol_6.html" | prepend: site.baseurl }}">
-      <img src="{{ "/images/flyers/vol_6.png" | prepend: site.baseurl }}" alt="vol.6 flyer">
-    </a>
-    <a href="{{ "/archives/vol_7.html" | prepend: site.baseurl }}">
-      <img src="{{ "/images/flyers/vol_7.png" | prepend: site.baseurl }}" alt="vol.7 flyer">
-    </a>
+  <div class="heading-section">
+    {% include posts.html %}
+    <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS フィード</a></p>
   </div>
 
 </div>
