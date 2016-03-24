@@ -34,7 +34,7 @@ title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
   <div class="heading-section archives">
     <h2 class="page-heading">過去の開催</h2>
     <ul class="event-archives">
-      {% for ev in site.events.archives %}
+      {% for ev in site.events.archives reversed %}
       <li class="event-archive-wrapper">
         <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}">
           <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
