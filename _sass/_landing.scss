@@ -1,132 +1,17 @@
 .landing-body {
   background: #010001;
-}
 
-.background-image {
-  background: url(/images/background.png);
-
-  background-size: cover;
-  background-position: center center;
-  background-attachment: cover;
-}
-
-.background-cover {
-  .background-movie {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-
-    @media (max-width: 1024px) {
-      display: none;
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
-}
-
-.landing {
-  background: url(/images/bg_mesh.png);
-  min-height: 700px;
-  padding-top: 60px;
-
-  .left {
-    float: left;
-    width: 400px;
-    padding-bottom: 3em;
-
-    .upcoming a {
-      color: #000;
-      text-decoration: none;
-      text-shadow: none;
-
-      .next-date-wrapper {
-        background: #fff;
-        padding: .2em .2em .1em .2em;
-        display: inline;
-      }
-
-      .next-date-indicator {
-
-      }
-
-      .next-date {
-        .year {
-          font-size: .9em;
-        }
-        .month {
-          font-size: 1.3em;
-        }
-        .day {
-          font-size: 1.3em;
-        }
-      }
-    }
-
-    h2 {
-      color: #ccc;
-    }
-
-    .post-meta {
-      color: #ddd;
-    }
-
-    @media screen and (max-width: 640px) {
-      width: 100%
-    }
+  .page-heading {
+    color: #ccc;
+    font-size: 1.5em;
   }
 
-  .right {
-    margin-left: 450px;
-    position: fixed;
-    width: 260px;
-
-    h1 {
-      a {
-        img {
-          opacity: .8;
-          transform: rotate(10deg);
-          transition: opacity .3s ease 0s;
-          max-width: 88%;
-
-          &:hover {
-            opacity: 1;
-            animation: scratch .5s ease 0s 1;
-
-            @keyframes scratch {
-              0% { transform: rotate(10deg); }
-              20% { transform: rotate(20deg); }
-              40% { transform: rotate(-4deg); }
-              60% { transform: rotate(12deg); }
-              80% { transform: rotate(-8deg); }
-              100% { transform: rotate(10deg); }
-            }
-          }
-
-          @media screen and (max-width: 640px) {
-            max-width: 60%;
-            text-align: right;
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 640px) {
-      margin-bottom: 3em;
-      margin-left: 0;
-      position: relative;
-      width: 100%;
-    }
+  .post-meta {
+    color: #aaa;
   }
 
   a {
-    color: #fff;
+    color: #aaf;
   }
 
   img {
@@ -134,7 +19,7 @@
     transition: opacity .6s ease 0s;
 
     @media screen and (max-width: 640px) {
-      opacity: .8;
+      opacity: .85;
     }
 
     &:hover {
@@ -145,100 +30,320 @@
   .heading-section + .heading-section {
     margin-top: 3.5em;
   }
+}
 
-  h1 {
-    a {
-      font-family: Roboto, sans-serif;
-      font-size: 70px;
-      font-weight: 900;
-      color: #fff;
-      line-height: 1;
-      text-decoration: none;
-      transition: all .4s ease 0s;
+.landing-above-flyer-content {
+  height: 800px;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1000px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 2em;
 
-      &:hover {
-        text-shadow: 0 0 4px rgba(255,255,255,.9);
+  @media screen and (max-width: 640px) {
+    max-height: 650px;
+  }
+}
+
+.upcoming-flyer-background-wrapper {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+
+  .upcoming-flyer-background {
+    display: block;
+    width: 100%;
+    opacity: .4;
+    z-index: -1000;
+
+    transform: scale(1.2);
+
+    @include filter(blur(10px));
+
+    @media screen and (max-width: 640px) {
+      transform: scale(2.0);
+    }
+  }
+}
+
+.landing-above-flyer-content-upper {
+}
+
+.landing-header {
+  text-align: center;
+}
+
+.site-logo-link {
+  $size: 150px;
+  width: $size;
+  height: $size;
+
+  .site-logo {
+    opacity: .8;
+    @include transform(rotate(10deg));
+    transition: opacity .3s ease 0s;
+
+    width: $size;
+    height: $size;
+
+    max-width: 88%;
+
+    &:hover {
+      opacity: 1;
+      animation: scratch .5s ease 0s 1;
+
+      @keyframes scratch {
+        0% {   @include transform(rotate(10deg)); }
+        20% {  @include transform(rotate(20deg)); }
+        40% {  @include transform(rotate(-4deg)); }
+        60% {  @include transform(rotate(12deg)); }
+        80% {  @include transform(rotate(-8deg)); }
+        100% { @include transform(rotate(10deg)); }
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      max-width: 60%;
+      text-align: right;
+    }
+  }
+}
+
+.page-links-wrapper {
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+
+    @media screen and (max-width: 640px) {
+      display: block;
+
+      &:not(:first-child) {
+        margin-top: .2em;
       }
     }
   }
 
-  .heading-container {
+  a {
+    box-sizing: border-box;
+
+    opacity: .7;
+
+    font-size: .9em;
+    letter-spacing: .08em;
+
+    padding: .2em .2em .2em .4em;
+
+    font-weight: 700;
+
+    color: #000;
+    background-color: #fff;
+
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: block;
+
+      font-size: 1.1em;
+      line-height: 2em;
+      letter-spacing: .04em;
+      background-color: rgba(255,255,255,.7);
+
+      &:not(:first-child) {
+        margin-top: .2em;
+      }
+    }
+  }
+}
+
+
+.heading-container {
+  text-shadow: 0 0 4px rgba(0,0,0,.4);
+}
+
+.social-buttons {
+  margin: 1em 0;
+
+  iframe:not(:first-child) {
+    margin-left: .5em;
+  }
+}
+
+.archives {
+  margin-top: 4em;
+}
+
+
+.heading-section-upcoming {
+  text-align: center;
+  margin-top: 2em;
+
+  > a {
+    display: inline-block;
+    position: relative;
+
+    // for perspective effect in transform: rotateX
+    $perspective: 800px;
+    -moz-perspective: $perspective;
+    -webkit-perspective: $perspective;
+    -o-perspective: $perspective;
+    -ms-perspective: $perspective;
+    perspective: $perspective;
+
+    .upcoming-ticker-wrapper {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      opacity: 0;
+
+      @include transform(rotateX(-3deg) translateY(30px) translateZ(30px));
+
+      transition: transform .3s ease 0s, opacity .3s ease 0s;
+
+      .upcoming-ticker {
+        display: inline;
+        text-transform: uppercase;
+        padding: 0 .7em;
+        border-radius: 2em;
+        font-size: 1.4em;
+        font-weight: 900;
+        color: #fff;
+        background-color: #000;
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+      }
+      @media screen and (max-width: 640px) {
+        transition: none;
+        opacity: .7;
+
+        @include transform(rotateX(-14deg) translateY(-16px) translateZ(100px));
+      }
+    }
+
+    .upcoming-date {
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
+    }
+
+    .upcoming-name {
+      display: none;
+    }
+
+    .upcoming-flyer {
+      display: block;
+      max-height: 800px;
+
+      box-shadow: 0 0 40px rgba(0,0,0,.4);
+
+      transition: transform .3s ease 0s, opacity .3s ease 0s;
+
+      @include transform(rotateX(-6deg));
+
+      @media screen and (max-width: 640px) {
+        width: 360px;
+      }
+      @media screen and (max-width: 430px) {
+        width: 280px;
+      }
+    }
+
+    @media screen and (min-width: 641px) {
+      &:hover {
+        .upcoming-ticker-wrapper {
+          transition: transform .3s ease .1s, opacity .3s ease .1s;
+
+          opacity: .7;
+
+          @include transform(rotateX(-14deg) translateY(8px) translateZ(100px));
+        }
+
+        .upcoming-flyer {
+          opacity: 1;
+
+          @include transform(rotateX(-9deg));
+        }
+      }
+    }
+  }
+}
+
+
+ul.event-archives {
+  margin: 0;
+}
+
+.event-archive-wrapper {
+  $size: 70px;
+  overflow: hidden;
+  width: 100%;
+  height: $size;
+  display: inline-block;
+  position: relative;
+
+  a {
+    display: block;
+  }
+
+  .event-archive-flyer {
+    width: 100%;
+    margin-top: -16%;
+    transition: transform .15s ease .02s, opacity .15s ease .02s;
+  }
+  .event-archive-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity .3s ease .02s;
+    z-index: 10;
+    font-weight: 700;
+    line-height: $size;
+    width: 100%;
+    display: inline-block;
+    font-size: 23px;
+    text-transform: uppercase;
+    color: #fff;
     text-shadow: 0 0 4px rgba(0,0,0,.4);
   }
 
-  .social-buttons {
-    margin-top: 2em;
+  @media screen and (max-width: 640px) {
+    .event-archive-name {
+      opacity: 1;
+      font-size: 16px;
+      text-shadow: 0 0 4px rgba(0,0,0,1);
+    }
   }
 
-  .archives {
-    margin-top: 4em;
+  &:hover {
+    @keyframes opacity-bounce {
+      0% { opacity: 1; }
+      50% { opacity: .7; }
+      100% { opacity: 1; }
+    }
+    animation: opacity-bounce 1.3s cubic-bezier(0.500, 0.855, 0.795, 0.015) 1s infinite;
 
-    ul.event-archives {
-      margin: 0;
+    .event-archive-flyer {
+      @include transform(scale(1.03));
+      opacity: 1;
     }
 
-    .event-archive-wrapper {
-      $size: 70px;
-      overflow: hidden;
-      width: 100%;
-      height: $size;
-      display: inline-block;
-      position: relative;
-
-      a {
-        display: block;
-      }
-
-      .event-archive-flyer {
-        width: 100%;
-        margin-top: -16%;
-        transition: transform .15s ease .02s, opacity .15s ease .02s;
-        position: absolute;
-      }
-      .event-archive-name {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-left: 1em;
-        box-sizing: border-box;
-        opacity: 0;
-        transition: opacity .3s ease .02s;
-        z-index: 10;
-        font-weight: 700;
-        line-height: $size;
-        width: 100%;
-        display: inline-block;
-        font-size: 23px;
-        text-transform: uppercase;
-        color: #fff;
-        text-shadow: 0 0 4px rgba(0,0,0,.4);
-      }
-
-      @media screen and (max-width: 640px) {
-        .event-archive-name {
-          opacity: 1;
-          font-size: 16px;
-          text-shadow: 0 0 4px rgba(0,0,0,1);
-        }
-      }
-
-      &:hover {
-        @keyframes opacity-bounce {
-          0% { opacity: 1; }
-          50% { opacity: .7; }
-          100% { opacity: 1; }
-        }
-        animation: opacity-bounce 1.3s cubic-bezier(0.500, 0.855, 0.795, 0.015) .5s infinite;
-
-        .event-archive-flyer {
-          transform: scale(1.03);
-          opacity: 1;
-        }
-
-        .event-archive-name {
-          opacity: 1;
-        }
-      }
+    .event-archive-name {
+      opacity: 1;
     }
   }
 }

@@ -144,7 +144,7 @@ blockquote {
     padding-left: $spacing-unit / 2;
   }
 }
-
+.wrapper-center { text-align: center; }
 
 
 /**
@@ -160,8 +160,8 @@ blockquote {
 }
 
 .upcoming {
-    font-size: 1.2em;
-    font-weight: bold;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 
@@ -176,4 +176,18 @@ blockquote {
 
 .center {
   text-align: center;
+}
+
+@mixin transform($val) {
+  -o-transform: $val;
+  -ms-transform: $val;
+  -moz-transform: $val;
+  -webkit-transform: $val;
+  transform: $val;
+}
+
+@mixin filter($val) {
+  -ms-filter: $val;
+  -webkit-filter: $val;
+  filter: $val;
 }

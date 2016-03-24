@@ -3,34 +3,52 @@ layout: landing
 title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
 ---
 
-<div class="heading-container">
-
-  <div class="heading-section upcoming">
-    <a href="/about">
-      <span class="next-date-wrapper">
-        <span class="next-date-indicator">Upcoming:</span>
-        <time class="next-date">
-          <span class="year">{{ site.events.upcoming.date | date: "%Y" }}</span><span class="time-separator">-</span><span class="month">{{ site.events.upcoming.date | date: "%m" }}</span><span class="time-separator">-</span><span class="day">{{ site.events.upcoming.date | date: "%d" }}</span>
-        </time>
-        <span class="next-date-outline">({{ site.events.upcoming.name }})</span>
-      </span>
-
-      <img src="/images/flyers/vol_9.jpg" alt="vol.9 flyer">
-    </a>
+<div class="landing-above-flyer-content">
+  <div class="upcoming-flyer-background-wrapper">
+    <img src="{{ site.events.upcoming.flyer | prepend: site.baseurl }}" class="upcoming-flyer-background">
   </div>
 
-  <div class="heading-section howtoitf-banner">
-    <a href="/howtoitf.html">
-      <img src="{{ "/images/howtoitf_header.png" | prepend: site.baseurl }}" alt="ITF_DJ の遊び方">
-    </a>
-  </div>
+  <div class="landing-above-flyer-content-upper">
+    <header class="landing-header">
+      <h1>
+        <a href="/about/" class="site-logo-link">
+          <img src="/images/itfdj_logo_circle.png" alt="IMAGINE THE FLOOR." class="site-logo">
+        </a>
+      </h1>
 
-  <div class="heading-section">
-    <a href="/photo.html">
-      <img src="/images/pf_banner.jpg" alt="パーティーフォト">
-    </a>
-  </div>
+      <ul class="page-links-wrapper">
+        <li><a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">
+          IMAGINE THE FLOOR. について
+        </a></li>
+        <li><a class="page-link" href="{{ '/photo.html' | prepend: site.baseurl }}">
+          パーティーフォト
+        </a></li>
+        <li><a class="page-link" href="{{ '/notes.html' | prepend: site.baseurl }}">
+          お願い・注意事項
+        </a></li>
+      </ul>
 
+      {% include social_buttons.html %}
+    </header>
+
+    <div class="heading-section heading-section-upcoming">
+      <a href="/about">
+        <img src="{{ site.events.upcoming.flyer | prepend: site.baseurl }}"
+             alt="{{ site.events.upcoming.name }} flyer" class="upcoming-flyer">
+
+        <div class="upcoming-ticker-wrapper">
+          <span class="upcoming-ticker">
+            <span class="upcoming-date-indicator">Upcoming</span>
+            <time class="upcoming-date">: {{ site.events.upcoming.date | date: "%Y-%m-%d" }}</time>
+            <span class="upcoming-name">({{ site.events.upcoming.name }})</span>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper wrapper-center">
   <div class="heading-section archives">
     <h2 class="page-heading">過去の開催</h2>
     <ul class="event-archives">
@@ -45,9 +63,20 @@ title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
     </ul>
   </div>
 
+  <div class="heading-section howtoitf-banner">
+    <a href="/howtoitf.html">
+      <img src="{{ "/images/howtoitf_header.png" | prepend: site.baseurl }}" alt="ITF_DJ の遊び方">
+    </a>
+  </div>
+
+  <div class="heading-section">
+    <a href="/photo.html">
+      <img src="/images/pf_banner.jpg" alt="パーティーフォト">
+    </a>
+  </div>
+
   <div class="heading-section">
     {% include posts.html %}
     <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS フィード</a></p>
   </div>
-
 </div>

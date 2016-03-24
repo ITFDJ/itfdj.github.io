@@ -3,40 +3,10 @@
 
   {% include head.html %}
 
-  <body class="landing-body background-image">
-
-    <div class="landing">
-      <div class="background-cover">
-        <video autoplay loop class="background-movie" id="background-movie">
-          <source src="movies/background.webm" type="video/webm">
-          <source src="movies/background.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="wrapper">
-        <div class="right">
-          <h1>
-            <a href="/about/">
-              <img src="/images/itfdj_logo_circle.png" alt="IMAGINE THE FUTURE.">
-            </a>
-          </h1>
-          <p>
-            <a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">IMAGINE THE FLOOR. について</a>
-          </p>
-          <p>
-            <a class="page-link" href="{{ '/photo.html' | prepend: site.baseurl }}">パーティーフォト</a>
-          </p>
-          <p>
-            <a class="page-link" href="{{ '/notes.html' | prepend: site.baseurl }}">お願い・注意事項</a>
-          </p>
-          {% include social_buttons.html %}
-        </div>
-        <div class="left">
-          {{ content }}
-        </div>
-      </div>
+  <body class="landing-body">
+    <div class="landing-content-wrapper">
+      {{ content }}
     </div>
-
   </body>
 
 </html>
