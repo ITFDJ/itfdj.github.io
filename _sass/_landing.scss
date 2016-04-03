@@ -18,7 +18,7 @@
     opacity: .7;
     transition: opacity .6s ease 0s;
 
-    @media screen and (max-width: 640px) {
+    @include max-width($on-palm) {
       opacity: .85;
     }
 
@@ -45,7 +45,7 @@
   position: relative;
   padding-top: 2em;
 
-  @media screen and (max-width: 640px) {
+  @include max-width($on-palm) {
     max-height: 650px;
   }
 }
@@ -70,7 +70,7 @@
 
     @include filter(blur(10px));
 
-    @media screen and (max-width: 640px) {
+    @include max-width($on-palm) {
       @include transform(scale(2.0));
     }
   }
@@ -126,7 +126,7 @@
   li {
     display: inline-block;
 
-    @media screen and (max-width: 640px) {
+    @include max-width($on-palm) {
       display: block;
 
       &:not(:first-child) {
@@ -224,7 +224,8 @@
         background-color: #000;
         box-shadow: 0 0 10px rgba(0,0,0,.4);
       }
-      @media screen and (max-width: 640px) {
+
+      @include max-width($on-palm) {
         transition: none;
         opacity: .7;
 
@@ -233,7 +234,7 @@
     }
 
     .upcoming-date {
-      @media screen and (max-width: 640px) {
+      @include max-width($on-palm) {
         display: none;
       }
     }
@@ -260,15 +261,15 @@
         1000% { @include transform(rotateX(-6deg)); }
       }
 
-      @media screen and (max-width: 640px) {
+      @include max-width($on-palm) {
         width: 360px;
       }
-      @media screen and (max-width: 430px) {
+      @include max-width(430px) {
         width: 280px;
       }
     }
 
-    @media screen and (min-width: 641px) {
+    @include min-width(641px) {
       &:hover {
         .upcoming-ticker-wrapper {
           transition: transform .3s ease .1s, opacity .3s ease .1s;
@@ -294,12 +295,16 @@ ul.event-archives {
 }
 
 .event-archive-wrapper {
-  $size: 70px;
+  $height: 230px;
+  $width:  230px;
+
+  height: $height;
+  width: $width;
+
   overflow: hidden;
-  width: 100%;
-  height: $size;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 
   a {
     display: block;
@@ -310,7 +315,34 @@ ul.event-archives {
     margin-top: -16%;
     transition: transform .15s ease .02s, opacity .15s ease .02s;
   }
+
   .event-archive-name {
+    display: inline-block;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity .3s ease .02s;
+    z-index: 10;
+    font-weight: 700;
+    line-height: $height;
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0,0,0,.4);
+
+    @include max-width($on-palm) {
+      top: 0;
+      opacity: 1;
+      font-size: 16px;
+      text-shadow: 0 0 4px rgba(0,0,0,1);
+    }
+  }
+
+  .event-archive-short-name {
+    display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
@@ -319,38 +351,69 @@ ul.event-archives {
     transition: opacity .3s ease .02s;
     z-index: 10;
     font-weight: 700;
-    line-height: $size;
+    line-height: $height;
     width: 100%;
-    display: inline-block;
-    font-size: 23px;
+    font-size: 70px;
     text-transform: uppercase;
     color: #fff;
-    text-shadow: 0 0 4px rgba(0,0,0,.4);
+    text-shadow: 0 0 16px rgba(0,0,0,.6);
+
+    &:first-letter {
+      font-size: 100px;
+    }
+
+    @include max-width($on-palm) {
+      display: none;
+      visibility: hidden;
+    }
   }
 
-  @media screen and (max-width: 640px) {
-    .event-archive-name {
-      opacity: 1;
-      font-size: 16px;
-      text-shadow: 0 0 4px rgba(0,0,0,1);
+
+  @include max-width($on-palm) {
+    $height: 60px;
+    $width: 100%;
+    height: $height;
+    width: $width;
+
+    .event-archive-name, .event-archive-short-name {
+      line-height: $height;
     }
   }
 
   &:hover {
     @keyframes opacity-bounce {
-      0% { opacity: 1; }
-      50% { opacity: .7; }
+      0%   { opacity: 1; }
+      50%  { opacity: .7; }
       100% { opacity: 1; }
     }
-    animation: opacity-bounce 1.3s cubic-bezier(0.500, 0.855, 0.795, 0.015) 1s infinite;
+
+    @keyframes y-bounce {
+      0%   { @include transform(rotate(0deg)); }
+      49%  { @include transform(rotate(0deg)); }
+      50%  { @include transform(rotate(4deg)); }
+      52%  { @include transform(rotate(-4deg)); }
+      56%  { @include transform(rotate(0deg)); }
+      100% { @include transform(rotate(0deg)); }
+    }
+
+    @keyframes come-from-bottom {
+      0%   { @include transform(translateY(10px)); }
+      100% { @include transform(translateY(0px)); }
+    }
 
     .event-archive-flyer {
       @include transform(scale(1.03));
       opacity: 1;
+
+      animation: opacity-bounce 1.3s cubic-bezier(0.500, 0.855, 0.795, 0.015) 1s infinite;
     }
 
-    .event-archive-name {
+    .event-archive-name, .event-archive-short-name {
       opacity: 1;
+    }
+
+    .event-archive-short-name {
+      animation: y-bounce 1.3s ease 1s infinite, come-from-bottom 0.2s ease 0s 1;
     }
   }
 }

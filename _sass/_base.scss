@@ -137,7 +137,7 @@ blockquote {
   padding-left: .7em;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
+  @include max-width($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit / 2;
@@ -169,25 +169,11 @@ blockquote {
  * Some tweaks
  */
 .twitter-timeline {
-  @media (max-width: 600px) {
+  @include max-width($on-palm) {
     height: 350px !important;
   }
 }
 
 .center {
   text-align: center;
-}
-
-@mixin transform($val) {
-  -o-transform: $val;
-  -ms-transform: $val;
-  -moz-transform: $val;
-  -webkit-transform: $val;
-  transform: $val;
-}
-
-@mixin filter($val) {
-  -ms-filter: $val;
-  -webkit-filter: $val;
-  filter: $val;
 }

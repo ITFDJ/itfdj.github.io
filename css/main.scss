@@ -3,10 +3,8 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
-$base-font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "HelveticaNeue-Light", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Segoe UI", "SegoeUI", Arial, Meiryo, Roboto, Helvetica, sans-serif;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Segoe UI", "SegoeUI", Meiryo, Roboto, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -24,30 +22,39 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    800px;
 
-$on-palm:          600px;
+$on-small-palm:    320px;
+$on-palm:          640px;
 $on-laptop:        800px;
 
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+@mixin max-width($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+@mixin min-width($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
 }
 
+@mixin transform($val) {
+  -o-transform: $val;
+  -ms-transform: $val;
+  -moz-transform: $val;
+  -webkit-transform: $val;
+  transform: $val;
+}
 
+@mixin filter($val) {
+  -ms-filter: $val;
+  -webkit-filter: $val;
+  filter: $val;
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "landing",
-        "page"
+  "base",
+  "layout",
+  "page",
+  "landing"
 ;

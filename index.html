@@ -57,6 +57,7 @@ title: "IMAGINE THE FLOOR. #ITF_DJ Official Site"
         <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}">
           <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
           <span class="event-archive-name">{{ ev.name }}</span>
+          <span class="event-archive-short-name">{{ ev.short_name }}</span>
         </a>
       </li>
       {% endfor %}
