@@ -7,7 +7,7 @@ deps:
 	bundle install --path vendor/bundle
 
 serve:
-	$(JEKYLL) serve --watch
+	$(JEKYLL) serve --incremental --watch
 
 build:
 	$(JEKYLL) build
