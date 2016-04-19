@@ -64,9 +64,14 @@ events:
       date: 2016-01-17
       flyer: /images/flyers/vol_8.png
       archive: vol_8.html
+    - name: vol.9
+      short_name: 9
+      date: 2016-04-17
+      flyer: /images/flyers/vol_9.jpg
+      archive: vol_9.html
   upcoming:
-    name: vol.9
-    short_name: 9
-    date: 2016-04-17
-    flyer: /images/flyers/vol_9.jpg
-    url: http://twipla.jp/events/190969
+    name: REMEMBER THE FLOOR.
+    short_name: R1
+    date: 2016-04-29
+    flyer: /images/flyers/rtf.png
+    url: http://twipla.jp/events/197830
