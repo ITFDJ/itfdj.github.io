@@ -1,83 +1,81 @@
 ---
 layout: landing
-title: "IMAGINE THE FLOOR. #ITF_DJ Official Website"
+title: "IMAGINE THE FLOOR. #ITF_DJ"
 ---
 
-<div class="landing-above-flyer-content">
-  <div class="upcoming-flyer-background-wrapper">
-    <img src="{{ site.events.upcoming.flyer | prepend: site.baseurl }}" class="upcoming-flyer-background">
-  </div>
-
-  <div class="landing-above-flyer-content-upper">
-    <header class="landing-header">
-      <h1>
-        <a href="/about/" class="site-logo-link">
-          <img src="/images/itfdj_logo_circle.png" alt="IMAGINE THE FLOOR." class="site-logo">
-        </a>
-      </h1>
-
-      <ul class="page-links-wrapper">
-        <li><a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">
-          IMAGINE THE FLOOR. について
-        </a></li>
-        <li><a class="page-link" href="{{ '/photo.html' | prepend: site.baseurl }}">
-          パーティーフォト
-        </a></li>
-        <li><a class="page-link" href="{{ '/notes.html' | prepend: site.baseurl }}">
-          お願い・注意事項
-        </a></li>
-      </ul>
-
-      {% include social_buttons.html %}
-    </header>
-
-    <div class="heading-section heading-section-upcoming">
-      <a href="/about">
-        <img src="{{ site.events.upcoming.flyer | prepend: site.baseurl }}"
-             alt="{{ site.events.upcoming.name }} flyer" class="upcoming-flyer">
-
-        <div class="upcoming-ticker-wrapper">
-          <span class="upcoming-ticker">
-            <span class="upcoming-date-indicator">Upcoming</span>
-            <time class="upcoming-date">: {{ site.events.upcoming.date | date: "%Y-%m-%d" }}</time>
-            <span class="upcoming-name">({{ site.events.upcoming.name }})</span>
-          </span>
-        </div>
+{% if site.events.upcoming %}
+<div class="landing-header-wrapper">
+{% else %}
+<div class="landing-header-wrapper landing-header-no-upcoming">
+{% endif %}
+  <header class="landing-header">
+    <h1>
+      <a href="/about/" class="site-logo-link">
+        <img src="/images/itfdj_logo_circle.png" alt="IMAGINE THE FLOOR." class="site-logo">
       </a>
-    </div>
+    </h1>
+
+    <ul class="page-links-wrapper">
+      <li><a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">
+        IMAGINE THE FLOOR. について
+      </a></li>
+      <li><a class="page-link" href="{{ '/notes.html' | prepend: site.baseurl }}">
+        お願い・注意事項
+      </a></li>
+    </ul>
+
+    {% include social_buttons.html %}
+  </header>
+
+  {% if site.events.upcoming %}
+  <div class="heading-section heading-section-upcoming">
+      <img src="{{ site.events.upcoming.flyer | prepend: site.baseurl }}"
+           alt="{{ site.events.upcoming.name }} flyer" class="upcoming-flyer">
+
+    <a href="/about/#upcoming">
+      <div class="upcoming-ticker-wrapper">
+        <span class="upcoming-ticker">
+          <span class="upcoming-date-indicator">
+            UPCOMING: <time class="upcoming-date">{{ site.events.upcoming.date | date: "%Y-%m-%d" }}</time>
+          </span>
+          <div class="upcoming-name">{{ site.events.upcoming.name }}</div>
+        </span>
+      </div>
+    </a>
   </div>
+  {% endif %}
 </div>
 
-<div class="wrapper wrapper-center">
-  <div class="heading-section archives">
-    <h2 class="page-heading">過去の開催</h2>
-    <ul class="event-archives">
-      {% for ev in site.events.archives reversed %}
-      <li class="event-archive-wrapper">
-        <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}">
+<div class="heading-section archives">
+  <h2 class="page-heading">Archives</h2>
+  <ul class="event-archives">
+    {% for ev in site.events.archives reversed %}
+    <li class="event-archive-wrapper">
+      <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}">
+        <span class="event-archive-flyer-wrapper">
           <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
-          <span class="event-archive-name">{{ ev.name }}</span>
-          <span class="event-archive-short-name">{{ ev.short_name }}</span>
-        </a>
+        </span>
+        <span class="event-archive-name">{{ ev.name }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="heading-section">
+  <h2 class="page-heading">Recent Posts</h2>
+  <div class="wrapper-after-heading">
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
       </li>
       {% endfor %}
     </ul>
-  </div>
-
-  <div class="heading-section howtoitf-banner">
-    <a href="/howtoitf.html">
-      <img src="{{ "/images/howtoitf_header.png" | prepend: site.baseurl }}" alt="ITF_DJ の遊び方">
-    </a>
-  </div>
-
-  <div class="heading-section">
-    <a href="/photo.html">
-      <img src="/images/pf_banner.jpg" alt="パーティーフォト">
-    </a>
-  </div>
-
-  <div class="heading-section">
-    {% include posts.html %}
     <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS フィード</a></p>
   </div>
 </div>

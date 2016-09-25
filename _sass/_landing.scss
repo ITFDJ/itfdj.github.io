@@ -2,8 +2,16 @@
   background: #010001;
 
   .page-heading {
-    color: #ccc;
-    font-size: 1.5em;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 900;
+    background: #000;
+    margin: 0;
+    padding: .4em .5em;
+
+    @include max-width($on-palm) {
+      font-size: 1.6em;
+    }
   }
 
   .post-meta {
@@ -30,61 +38,50 @@
   .heading-section + .heading-section {
     margin-top: 3.5em;
   }
-
-  .archives {
-    margin-top: 2em;
-  }
 }
 
-.landing-above-flyer-content {
+.landing-header-wrapper {
   height: 800px;
-  height: 100vh;
+  height: 90vh;
   min-height: 600px;
   max-height: 1000px;
+  max-height: 100vw;
   overflow: hidden;
   position: relative;
-  padding-top: 2em;
+  padding: 2em 1.5em 0 1.5em;
 
   @include max-width($on-palm) {
-    max-height: 650px;
+    height: 320px;
+    height: 100vw;
+    min-height: 400px;
   }
-}
 
-.upcoming-flyer-background-wrapper {
-  overflow: hidden;
-  position: absolute;
-  z-index: -1000;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-
-  .upcoming-flyer-background {
-    display: block;
-    width: 100%;
-    opacity: .4;
-    z-index: -1000;
-
-    @include transform(scale(1.2));
-
-    @include filter(blur(10px));
+  &.landing-header-no-upcoming {
+    height: 300px;
+    min-height: 300px;
 
     @include max-width($on-palm) {
-      @include transform(scale(2.0));
+      height: 400px;
+      max-height: 400px;
     }
   }
 }
 
-.landing-above-flyer-content-upper {
-}
+.landing-header-no-upcoming {
+  .site-logo-link {
+    $size: 150px;
+    width: $size;
+    height: $size;
 
-.landing-header {
-  text-align: center;
+    .site-logo {
+      width: $size;
+      height: $size;
+    }
+  }
 }
 
 .site-logo-link {
-  $size: 150px;
+  $size: 350px;
   width: $size;
   height: $size;
 
@@ -111,10 +108,15 @@
         100% { @include transform(rotate(10deg)); }
       }
     }
+  }
 
-    @media screen and (max-width: 640px) {
-      max-width: 60%;
-      text-align: right;
+  @include max-width($on-palm) {
+    $size: 150px;
+    width: $size;
+    height: $size;
+    .site-logo {
+      width: $size;
+      height: $size;
     }
   }
 }
@@ -130,27 +132,22 @@
       display: block;
 
       &:not(:first-child) {
-        margin-top: .2em;
+        margin-top: 2px;
       }
     }
   }
 
   a {
     box-sizing: border-box;
-
-    opacity: .7;
-
-    font-size: .9em;
+    opacity: .8;
     letter-spacing: .08em;
-
-    padding: .2em .2em .2em .4em;
-
-    font-weight: 700;
-
-    color: #000;
-    background-color: #fff;
-
+    font-size: 1.3em;
+    padding: .35em .8em .35em 0;
+    color: #fff;
+    font-weight: bold;
     text-decoration: none;
+    text-shadow: 0px 0px 8px rgba(0,0,0,.8);
+    transition: opacity .2s ease 0s;
 
     &:hover {
       opacity: 1;
@@ -158,153 +155,82 @@
 
     @media screen and (max-width: 640px) {
       display: block;
-
+      opacity: .9;
       font-size: 1.1em;
-      line-height: 2em;
+      line-height: 1.4em;
       letter-spacing: .04em;
-      background-color: rgba(255,255,255,.7);
-
-      &:not(:first-child) {
-        margin-top: .2em;
-      }
     }
   }
 }
 
+.heading-section-upcoming {
+  .upcoming-flyer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    width: 100vw;
+    z-index: -1;
 
-.heading-container {
-  text-shadow: 0 0 4px rgba(0,0,0,.4);
+    @include max-width($on-palm) {
+      opacity: .5;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .upcoming-ticker-wrapper {
+    letter-spacing: .01em;
+    font-size: 3em;
+    font-weight: 900;
+    margin-top: .4em;
+    text-shadow: 0px 0px 14px rgba(0,0,0,.4);
+  }
+
+  .upcoming-name {
+    font-size: 1.3em;
+    line-height: .75em;
+  }
+
+  @include max-width($on-palm) {
+    .upcoming-ticker-wrapper {
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+  }
 }
 
 .social-buttons {
   margin: 1em 0;
 
   iframe:not(:first-child) {
-    margin-left: .5em;
+    margin-left: .3em;
   }
 }
 
-.heading-section-upcoming {
-  text-align: center;
-  margin-top: 2em;
-
-  > a {
-    display: inline-block;
-    position: relative;
-
-    // for perspective effect in transform: rotateX
-    $perspective: 800px;
-    -moz-perspective: $perspective;
-    -webkit-perspective: $perspective;
-    -o-perspective: $perspective;
-    -ms-perspective: $perspective;
-    perspective: $perspective;
-
-    .upcoming-ticker-wrapper {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-
-      opacity: 0;
-
-      @include transform(rotateX(-3deg) translateY(30px) translateZ(30px));
-
-      transition: transform .3s ease 0s, opacity .3s ease 0s;
-
-      .upcoming-ticker {
-        display: inline;
-        text-transform: uppercase;
-        padding: 0 .7em;
-        border-radius: 2em;
-        font-size: 1.4em;
-        font-weight: 900;
-        color: #fff;
-        background-color: #000;
-        box-shadow: 0 0 10px rgba(0,0,0,.4);
-      }
-
-      @include max-width($on-palm) {
-        transition: none;
-        opacity: .7;
-
-        @include transform(rotateX(-14deg) translateY(-16px) translateZ(100px));
-      }
-    }
-
-    .upcoming-date {
-      @include max-width($on-palm) {
-        display: none;
-      }
-    }
-
-    .upcoming-name {
-      display: none;
-    }
-
-    .upcoming-flyer {
-      display: block;
-      max-height: 800px;
-
-      box-shadow: 0 0 40px rgba(0,0,0,.4);
-
-      transition: transform .3s ease 0s, opacity .3s ease 0s;
-
-      @include transform(rotateX(-6deg));
-
-      animation: welcome-bounce .25s ease 1.8s 2;
-
-      @keyframes welcome-bounce {
-        0% { @include transform(rotateX(-6deg)); }
-        50% { @include transform(rotateX(-4deg)); }
-        1000% { @include transform(rotateX(-6deg)); }
-      }
-
-      @include max-width($on-palm) {
-        width: 360px;
-      }
-      @include max-width(430px) {
-        width: 280px;
-      }
-    }
-
-    @include min-width(641px) {
-      &:hover {
-        .upcoming-ticker-wrapper {
-          transition: transform .3s ease .1s, opacity .3s ease .1s;
-
-          opacity: .7;
-
-          @include transform(rotateX(-14deg) translateY(8px) translateZ(100px));
-        }
-
-        .upcoming-flyer {
-          opacity: 1;
-
-          @include transform(rotateX(-9deg));
-        }
-      }
-    }
-  }
-}
-
-
-ul.event-archives {
+.event-archives {
   margin: 0;
 }
 
 .event-archive-wrapper {
-  $height: 230px;
-  $width:  230px;
+  $height: 140px;
+  $width:  100vw;
+
+  $animation-delay: .02s;
 
   height: $height;
   width: $width;
 
   overflow: hidden;
-  display: inline-block;
+  display: block;
   position: relative;
   cursor: pointer;
+
+  user-select: none;
+
+  transition: height .2s ease $animation-delay;
 
   a {
     display: block;
@@ -312,108 +238,71 @@ ul.event-archives {
 
   .event-archive-flyer {
     width: 100%;
-    margin-top: -16%;
-    transition: transform .15s ease .02s, opacity .15s ease .02s;
+    margin-top: -20%;
+    opacity: .7;
+    transition: transform .2s ease $animation-delay, opacity .2s ease $animation-delay;
+  }
+
+  .event-archive-flyer-wrapper {
+    display: block;
+    width: 100%;
+    height: $height;
+    overflow: hidden;
+    transition: filter .2s ease $animation-delay, height .2s ease $animation-delay;
   }
 
   .event-archive-name {
     display: inline-block;
     position: absolute;
-    top: -50px;
-    left: 0;
+    top: 0;
+    left: .6em;
     box-sizing: border-box;
-    opacity: 0;
-    transition: opacity .3s ease .02s;
     z-index: 10;
-    font-weight: 700;
+    font-weight: 900;
     line-height: $height;
     width: 100%;
-    font-size: 12px;
+    font-size: 42px;
     text-transform: uppercase;
     color: #fff;
     text-shadow: 0 0 4px rgba(0,0,0,.4);
+    transform-origin: 0 50% 0;
+
+    transition: transform .2s ease $animation-delay;
 
     @include max-width($on-palm) {
+      left: .8em;
+    }
+  }
+
+  @include max-width($on-palm) {
+    $height: 60px;
+    height: $height;
+
+    .event-archive-name {
       top: 0;
       opacity: 1;
       font-size: 16px;
       text-shadow: 0 0 4px rgba(0,0,0,1);
-    }
-  }
-
-  .event-archive-short-name {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity .3s ease .02s;
-    z-index: 10;
-    font-weight: 700;
-    line-height: $height;
-    width: 100%;
-    font-size: 70px;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 0 0 16px rgba(0,0,0,.6);
-
-    &:first-letter {
-      font-size: 100px;
-    }
-
-    @include max-width($on-palm) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-
-  @include max-width($on-palm) {
-    $height: 60px;
-    $width: 100%;
-    height: $height;
-    width: $width;
-
-    .event-archive-name, .event-archive-short-name {
       line-height: $height;
     }
   }
 
   &:hover {
-    @keyframes opacity-bounce {
-      0%   { opacity: 1; }
-      50%  { opacity: .7; }
-      100% { opacity: 1; }
-    }
-
-    @keyframes y-bounce {
-      0%   { @include transform(rotate(0deg)); }
-      49%  { @include transform(rotate(0deg)); }
-      50%  { @include transform(rotate(4deg)); }
-      52%  { @include transform(rotate(-4deg)); }
-      56%  { @include transform(rotate(0deg)); }
-      100% { @include transform(rotate(0deg)); }
-    }
-
-    @keyframes come-from-bottom {
-      0%   { @include transform(translateY(10px)); }
-      100% { @include transform(translateY(0px)); }
-    }
-
     .event-archive-flyer {
-      @include transform(scale(1.03));
-      opacity: 1;
-
-      animation: opacity-bounce 1.3s cubic-bezier(0.500, 0.855, 0.795, 0.015) 1s infinite;
-    }
-
-    .event-archive-name, .event-archive-short-name {
       opacity: 1;
     }
-
-    .event-archive-short-name {
-      animation: y-bounce 1.3s ease 1s infinite, come-from-bottom 0.2s ease 0s 1;
+    .event-archive-flyer-wrapper {
     }
+    .event-archive-name {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.wrapper-after-heading {
+  padding: 0 25px;
+
+  @include max-width($on-palm) {
+    padding: 0 13px;
   }
 }
