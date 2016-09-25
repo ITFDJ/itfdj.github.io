@@ -8,18 +8,21 @@ permalink: /about/
 [![IMAGINE THE FLOOR. の遊び方](/images/howtoitf_header.png)](/howtoitf.html)
 </div>
 
-フロアで出会う、新しい自分 --- つくば市天久保1丁目のクラブ [OctBaSS](https://twitter.com/octbass_tsukuba) でイベントを行う団体「**IMAGINE THE FLOOR.**」の公式サイトです。
-クラブ初心者の人が気軽に足を運べるイベントです。好評につき定期イベントに昇格しました。
+フロアで出会う、新しい自分 --- 普段はつくば市天久保1丁目のクラブ [OctBaSS](https://twitter.com/octbass_tsukuba) でクラブイベントを行っている「**IMAGINE THE FLOOR.**」の公式ウェブサイトです。
 
-番外編イベントとして、つくば市天久保3丁目のピザ屋さん [ピッツェリア レガーメ](http://www.pizzerialegame.com/) にて「**IMAGINE THE PIZZA. #ITP_DJ**」も行っています。
+クラブ初心者の人も気軽に足を運べるオールジャンルイベントです。好評につき定期イベントに昇格しました。
 
-<div class="upcoming" markdown="1">
+番外編イベントとして、つくば市天久保3丁目のピザ屋さん [ピッツェリア レガーメ](http://www.pizzerialegame.com/) にて「**IMAGINE THE PIZZA. #ITP_DJ**」も行っていました。
+
+{% if site.events.upcoming %}
+<div id="upcoming" class="upcoming" markdown="1">
 
 # 開催予定
 
 - [{{ site.events.upcoming.name }} ({{ site.events.upcoming.date | date: "%Y-%m-%d" }})]({{ site.events.upcoming.url }})
 
 </div>
+{% endif %}
 
 <div class="archives" markdown="1">
 
@@ -44,9 +47,13 @@ TwiPla やアップロードされた mix などへのリンクをまとめて�
 
 関連: [#ITP_DJ](https://twitter.com/search?q=%23ITF_DJ)
 
-<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/ITP_DJ" data-widget-id="617877195332018177">#ITP_DJ のツイート</a>
-
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+## Mixcloud アカウント
+
+[IMAGINE THE FLOOR. #ITF_DJ \| Mixcloud](https://www.mixcloud.com/ITF_DJ/)
+
+<iframe width="200" height="250" src="https://www.mixcloud.com/widget/follow/?u=https%3A%2F%2Fwww.mixcloud.com%2FITF_DJ%2F&dark=1" frameborder="0"></iframe>
 
 ## USTREAM チャンネル
 
