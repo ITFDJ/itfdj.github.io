@@ -52,9 +52,7 @@ title: "IMAGINE THE FLOOR. #ITF_DJ"
     {% for ev in site.events.archives reversed %}
     <li class="event-archive-wrapper">
       <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}">
-        <span class="event-archive-flyer-wrapper">
-          <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
-        </span>
+        <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
         <span class="event-archive-name">{{ ev.name }}</span>
       </a>
     </li>

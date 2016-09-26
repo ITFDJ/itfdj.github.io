@@ -239,15 +239,7 @@
     width: 100%;
     margin-top: -20%;
     opacity: .7;
-    transition: transform .2s ease $animation-delay, opacity .2s ease $animation-delay;
-  }
-
-  .event-archive-flyer-wrapper {
-    display: block;
-    width: 100%;
-    height: $height;
-    overflow: hidden;
-    transition: filter .2s ease $animation-delay, height .2s ease $animation-delay;
+    transition: transform .2s ease $animation-delay, opacity .1s ease 0s;
   }
 
   .event-archive-name {
