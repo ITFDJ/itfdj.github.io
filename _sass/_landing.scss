@@ -1,5 +1,5 @@
 .landing-body {
-  background: #010001;
+  background: $landing-background-color;
 
   .page-heading {
     color: #fff;
@@ -7,10 +7,11 @@
     font-weight: 900;
     background: #000;
     margin: 0;
-    padding: .4em .5em;
+    padding: .2em .5em;
 
     @include max-width($on-palm) {
       font-size: 1.6em;
+      padding: .3em .8em;
     }
   }
 
@@ -20,19 +21,6 @@
 
   a {
     color: #aaf;
-  }
-
-  img {
-    opacity: .7;
-    transition: opacity .6s ease 0s;
-
-    @include max-width($on-palm) {
-      opacity: .85;
-    }
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
   .heading-section + .heading-section {
@@ -54,6 +42,19 @@
     height: 320px;
     height: 100vw;
     min-height: 400px;
+  }
+
+  &.landing-header-with-upcoming {
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      background: linear-gradient(to bottom, transparent, $landing-background-color);
+      top: 0;
+      left: 0;
+    }
   }
 
   &.landing-header-no-upcoming {
@@ -170,10 +171,10 @@
     left: 0;
     width: 100%;
     width: 100vw;
-    z-index: -1;
+    z-index: -100;
 
     @include max-width($on-palm) {
-      opacity: .5;
+      opacity: .7;
     }
   }
 
@@ -210,82 +211,88 @@
   }
 }
 
-.event-archives {
-  margin: 0;
+.event-archives-wrapper {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  $scrollbarWidth: 8px;
+  $scrollBarColor: rgba(255,255,255,.4);
+
+  &::-webkit-scrollbar {
+    width: $scrollbarWidth;
+  }
+  &::-webkit-scrollbar:horizontal {
+    height: $scrollbarWidth;
+  }
+  &::-webkit-scrollbar-button {
+    width: 20px;
+    height: 3px;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-piece:start {
+    background: $scrollBarColor;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $landing-background-color;
+    border-radius: 8px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: $scrollBarColor;
+  }
 }
 
-.event-archive-wrapper {
-  $height: 140px;
-  $width:  100vw;
+.event-archives {
+  $size: 220px;
+  $height: 260px;
+  $padding: 10px;
 
-  $animation-delay: .02s;
+  margin: 0;
+  list-style-type: none;
+  display: table;
+  white-space: nowrap;
+  height: $size;
+  padding: 0 $padding;
 
-  height: $height;
-
-  overflow: hidden;
-  display: block;
-  position: relative;
-  cursor: pointer;
-
-  user-select: none;
-
-  transition: height .2s ease $animation-delay;
-
-  a {
-    display: block;
-  }
-
-  .event-archive-flyer {
-    width: 100%;
-    margin-top: -20%;
-    opacity: .7;
-    transition: transform .2s ease $animation-delay, opacity .1s ease 0s;
-  }
-
-  .event-archive-name {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: .6em;
-    box-sizing: border-box;
-    z-index: 10;
-    font-weight: 900;
-    line-height: $height;
-    width: 100%;
-    font-size: 42px;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 0 0 4px rgba(0,0,0,.4);
-    transform-origin: 0 50% 0;
-
-    transition: transform .2s ease $animation-delay;
-
-    @include max-width($on-palm) {
-      left: .8em;
-    }
-  }
-
-  @include max-width($on-palm) {
-    $height: 60px;
+  .event-archive-wrapper {
+    display: table-cell;
+    width: $size;
     height: $height;
+    vertical-align: top;
+    padding: 0 $padding;
 
-    .event-archive-name {
-      top: 0;
-      opacity: 1;
-      font-size: 16px;
-      text-shadow: 0 0 4px rgba(0,0,0,1);
-      line-height: $height;
-    }
-  }
+    opacity: .7;
+    transition: opacity .1s ease 0s;
 
-  &:hover {
-    .event-archive-flyer {
+    &:hover {
       opacity: 1;
     }
+
+    .event-archive-link {
+      display: block;
+      width: $size;
+      height: $height;
+      text-decoration: none;
+    }
+
     .event-archive-flyer-wrapper {
+      display: block;
+      width: $size;
+      height: $size;
+      overflow: hidden;
+      border-radius: 16px;
     }
+
+    .event-archive-flyer {
+      width: 100%;
+    }
+
     .event-archive-name {
-      transform: scale(1.05);
+      margin-top: 6px;
+      color: #fff;
+      font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -294,6 +301,6 @@
   padding: 0 25px;
 
   @include max-width($on-palm) {
-    padding: 0 13px;
+    padding: 0 20px;
   }
 }

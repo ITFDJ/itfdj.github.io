@@ -4,7 +4,7 @@ title: "IMAGINE THE FLOOR. #ITF_DJ"
 ---
 
 {% if site.events.upcoming %}
-<div class="landing-header-wrapper">
+<div class="landing-header-wrapper landing-header-with-upcoming">
 {% else %}
 <div class="landing-header-wrapper landing-header-no-upcoming">
 {% endif %}
@@ -48,16 +48,20 @@ title: "IMAGINE THE FLOOR. #ITF_DJ"
 
 <div class="heading-section archives">
   <h2 class="page-heading">Archives</h2>
-  <ul class="event-archives">
-    {% for ev in site.events.archives reversed %}
-    <li class="event-archive-wrapper">
-      <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}">
-        <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
-        <span class="event-archive-name">{{ ev.name }}</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+  <div class="event-archives-wrapper">
+    <ul class="event-archives">
+      {% for ev in site.events.archives reversed %}
+      <li class="event-archive-wrapper">
+        <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}" class="event-archive-link">
+          <div class="event-archive-flyer-wrapper">
+            <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
+          </div>
+          <div class="event-archive-name">{{ ev.name }}</div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 <div class="heading-section">
