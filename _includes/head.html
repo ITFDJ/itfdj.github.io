@@ -14,7 +14,11 @@
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  {% if site.events.upcoming %}
   <meta property="og:image" content="{{ site.events.upcoming.flyer | prepend: site.baseurl | prepend: site.url }}">
+  {% else %}
+  <meta property="og:image" content="{{ '/images/archives/itf_pf1/IMG_8609.jpg' | prepend: site.baseurl | prepend: site.url }}">
+  {% endif %}
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
