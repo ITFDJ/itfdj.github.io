@@ -1,10 +1,8 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Segoe UI", "SegoeUI", Meiryo, Roboto, Helvetica, Arial, sans-serif;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "HelveticaNeue", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Segoe UI", "SegoeUI", Meiryo, Roboto, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
