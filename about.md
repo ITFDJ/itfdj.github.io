@@ -14,12 +14,12 @@ permalink: /about/
 
 番外編イベントとして、つくば市天久保3丁目のピザ屋さん [ピッツェリア レガーメ](http://www.pizzerialegame.com/) にて「**IMAGINE THE PIZZA. #ITP_DJ**」も行っていました。
 
-{% if site.events.upcoming %}
+{% if site.data.events.upcoming %}
 <div id="upcoming" class="upcoming" markdown="1">
 
 # 開催予定
 
-- [{{ site.events.upcoming.name }} ({{ site.events.upcoming.date | date: "%Y-%m-%d" }})]({{ site.events.upcoming.url }})
+- [{{ site.data.events.upcoming.name }} ({{ site.data.events.upcoming.date | date: "%Y-%m-%d" }})]({{ site.data.events.upcoming.url }})
 
 </div>
 {% endif %}
@@ -30,7 +30,7 @@ permalink: /about/
 
 TwiPla やアップロードされた mix などへのリンクをまとめています。
 
-{% for ev in site.events.archives reversed %}
+{% for ev in site.data.events.archives reversed %}
 - [{{ ev.name }} ({{ ev.date | date: "%Y-%m-%d" }})]({{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}){% endfor %}
 
 </div>

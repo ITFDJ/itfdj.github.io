@@ -3,7 +3,7 @@ layout: landing
 title: "IMAGINE THE FLOOR. #ITF_DJ"
 ---
 
-{% if site.events.upcoming %}
+{% if site.data.events.upcoming %}
 <div class="landing-header-wrapper landing-header-with-upcoming">
 {% else %}
 <div class="landing-header-wrapper landing-header-no-upcoming">
@@ -27,18 +27,18 @@ title: "IMAGINE THE FLOOR. #ITF_DJ"
     {% include social_buttons.html %}
   </header>
 
-  {% if site.events.upcoming %}
+  {% if site.data.events.upcoming %}
   <div class="heading-section heading-section-upcoming">
-      <img src="{{ site.events.upcoming.flyer | prepend: site.baseurl }}"
-           alt="{{ site.events.upcoming.name }} flyer" class="upcoming-flyer">
+      <img src="{{ site.data.events.upcoming.flyer | prepend: site.baseurl }}"
+           alt="{{ site.data.events.upcoming.name }} flyer" class="upcoming-flyer">
 
     <a href="/about/#upcoming">
       <div class="upcoming-ticker-wrapper">
         <span class="upcoming-ticker">
           <span class="upcoming-date-indicator">
-            UPCOMING: <time class="upcoming-date">{{ site.events.upcoming.date | date: "%Y-%m-%d" }}</time>
+            UPCOMING: <time class="upcoming-date">{{ site.data.events.upcoming.date | date: "%Y-%m-%d" }}</time>
           </span>
-          <div class="upcoming-name">{{ site.events.upcoming.name }}</div>
+          <div class="upcoming-name">{{ site.data.events.upcoming.name }}</div>
         </span>
       </div>
     </a>
@@ -50,7 +50,7 @@ title: "IMAGINE THE FLOOR. #ITF_DJ"
   <h2 class="page-heading">Archives</h2>
   <div class="event-archives-wrapper">
     <ul class="event-archives">
-      {% for ev in site.events.archives reversed %}
+      {% for ev in site.data.events.archives reversed %}
       <li class="event-archive-wrapper">
         <a href="{{ ev.archive | prepend: '/archives/' | prepend: site.baseurl }}" class="event-archive-link">
           <div class="event-archive-flyer-wrapper">
