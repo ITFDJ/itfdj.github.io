@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:description" content="{{ site.description }}">
 
-  {% if site.events.upcoming %}
+  {% if site.data.events.upcoming %}
   <meta property="og:image" content="{{ site.data.events.upcoming.flyer | prepend: site.baseurl | prepend: site.url }}">
   <meta name="twitter:image" content="{{ site.data.events.upcoming.flyer | prepend: site.baseurl | prepend: site.url }}">
   {% else %}
