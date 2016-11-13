@@ -14,13 +14,12 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
+  background-color: $background-color;
+  color: $text-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  line-height: $base-line-height;
   font-weight: 300;
-  color: $text-color;
-  background-color: $background-color;
-  -webkit-text-size-adjust: 100%;
+  line-height: $base-line-height;
 }
 
 
@@ -134,8 +133,7 @@ blockquote {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: .7em;
@@ -156,17 +154,12 @@ blockquote {
  * Clearfix
  */
 %clearfix {
-
-  &:after {
-    content: "";
-    display: table;
+  &::after {
     clear: both;
-  }
-}
+    content: '';
+    display: table;
 
-.upcoming {
-  font-size: 1.2em;
-  font-weight: bold;
+  }
 }
 
 

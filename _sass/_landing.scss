@@ -1,11 +1,15 @@
+$landing-background-color: #010001;
+$landing-em-color: #fff;
+$landing-meta-color: #aaa;
+$landing-link-color: #aaf;
+
 .landing-body {
   background: $landing-background-color;
 
   .page-heading {
-    color: #fff;
+    color: $landing-em-color;
     font-size: 3em;
     font-weight: 900;
-    background: #000;
     margin: 0;
     padding: .2em .5em;
 
@@ -16,11 +20,11 @@
   }
 
   .post-meta {
-    color: #aaa;
+    color: $landing-meta-color;
   }
 
   a {
-    color: #aaf;
+    color: $landing-link-color;
   }
 
   .heading-section + .heading-section {
@@ -28,15 +32,26 @@
   }
 }
 
+.site-heading {
+  color: $landing-em-color;
+  font-size: 1.6em;
+  font-weight: 900;
+  opacity: .7;
+}
+
 .landing-header-wrapper {
   height: 800px;
   height: 90vh;
-  min-height: 600px;
+
   max-height: 1000px;
   max-height: 100vw;
+
+  min-height: 600px;
   overflow: hidden;
+
+  padding: 2em 1.5em 0;
+
   position: relative;
-  padding: 2em 1.5em 0 1.5em;
 
   @include max-width($on-palm) {
     height: 320px;
@@ -45,15 +60,26 @@
   }
 
   &.landing-header-with-upcoming {
-    &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -10;
+    @include min-width($on-palm) {
+      .heading-section-upcoming {
+        margin-top: 20em;
+      }
+    }
+    @include max-width($on-palm) {
+      .heading-section-upcoming {
+        margin-top: 10em;
+      }
+    }
+
+    &::after {
       background: linear-gradient(to bottom, transparent, $landing-background-color);
-      top: 0;
+      content: '';
+      height: 100%;
       left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -10;
     }
   }
 
@@ -68,107 +94,38 @@
   }
 }
 
-.landing-header-no-upcoming {
-  .site-logo-link {
-    $size: 150px;
-    width: $size;
-    height: $size;
+.landing-header {
+  padding-top: .6em;
+  text-align: center;
 
-    .site-logo {
-      width: $size;
-      height: $size;
-    }
-  }
-}
-
-.site-logo-link {
-  $size: 300px;
-  width: $size;
-  height: $size;
-
-  .site-logo {
-    opacity: .8;
-    @include transform(rotate(10deg));
-    transition: opacity .3s ease 0s;
-
-    width: $size;
-    height: $size;
-
-    max-width: 88%;
-
-    &:hover {
-      opacity: 1;
-      animation: scratch .5s ease 0s 1;
-
-      @keyframes scratch {
-        0% {   @include transform(rotate(10deg)); }
-        20% {  @include transform(rotate(20deg)); }
-        40% {  @include transform(rotate(-4deg)); }
-        60% {  @include transform(rotate(12deg)); }
-        80% {  @include transform(rotate(-8deg)); }
-        100% { @include transform(rotate(10deg)); }
-      }
-    }
-  }
-
-  @include max-width($on-palm) {
-    $size: 150px;
-    width: $size;
-    height: $size;
-    .site-logo {
-      width: $size;
-      height: $size;
-    }
-  }
-}
-
-.page-links-wrapper {
-  margin: 0;
-  list-style-type: none;
-
-  li {
-    display: inline-block;
-
-    @include max-width($on-palm) {
-      display: block;
-
-      &:not(:first-child) {
-        margin-top: 2px;
-      }
-    }
-  }
-
-  a {
-    box-sizing: border-box;
-    opacity: .8;
-    letter-spacing: .08em;
-    font-size: 1.3em;
-    padding: .35em .8em .35em 0;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    text-shadow: 0px 0px 8px rgba(0,0,0,.8);
-    transition: opacity .2s ease 0s;
-
-    &:hover {
-      opacity: 1;
+  @include min-width ($on-laptop) {
+    .site-heading, .social-buttons {
+      display: inline-block;
     }
 
-    @media screen and (max-width: 640px) {
-      display: block;
-      opacity: .9;
-      font-size: 1.1em;
-      line-height: 1.4em;
-      letter-spacing: .04em;
+    .site-heading {
+      margin-right: .6em;
     }
   }
 }
 
 .heading-section-upcoming {
+  background-color: rgba(0, 0, 0, .4);
+
+  display: inline-block;
+
+  margin-left: -2em;
+
+  @include max-width($on-palm) {
+    margin-right: -2em;
+  }
+
+  padding: 0 2em;
+
   .upcoming-flyer {
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     width: 100vw;
     z-index: -100;
@@ -179,15 +136,32 @@
   }
 
   a {
-    color: #fff;
+    color: $landing-em-color;
   }
 
   .upcoming-ticker-wrapper {
-    letter-spacing: .01em;
+    color: $landing-em-color;
     font-size: 3em;
     font-weight: 900;
     margin-top: .4em;
-    text-shadow: 0px 0px 14px rgba(0,0,0,.4);
+
+    @include max-width($on-palm) {
+      font-size: 1.7em;
+    }
+  }
+
+  .upcoming-date-indicatior-tip {
+    display: block;
+    font-size: .8em;
+    font-variant: small-caps;
+    font-weight: 100;
+    letter-spacing: .1em;
+    line-height: 1em;
+  }
+
+  .upcoming-date {
+    display: block;
+    margin: 0 0 .2em;
   }
 
   .upcoming-name {
@@ -195,10 +169,30 @@
     line-height: .75em;
   }
 
-  @include max-width($on-palm) {
-    .upcoming-ticker-wrapper {
-      margin-top: 0;
-      font-size: 1.3em;
+  .upcoming-event-url {
+    color: $landing-em-color;
+    display: inline-block;
+    font-size: 1.6em;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin: .7em 0;
+
+    @include max-width($on-palm) {
+      margin: .4em 0;
+    }
+  }
+}
+
+.heading-section-event-description {
+  color: $landing-meta-color;
+
+  padding: 0 1em;
+
+  p {
+    margin: .4em 0;
+
+    @include max-width($on-palm) {
+      font-size: .8em;
     }
   }
 }
@@ -215,22 +209,22 @@
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 
-  $scrollbarWidth: 8px;
-  $scrollBarColor: rgba(255,255,255,.4);
+  $scroll-bar-width: 8px;
+  $scroll-bar-color: rgba(255, 255, 255, .4);
 
   &::-webkit-scrollbar {
-    width: $scrollbarWidth;
+    width: $scroll-bar-width;
   }
   &::-webkit-scrollbar:horizontal {
-    height: $scrollbarWidth;
+    height: $scroll-bar-width;
   }
   &::-webkit-scrollbar-button {
-    width: 20px;
-    height: 3px;
     background: transparent;
+    height: 3px;
+    width: 20px;
   }
   &::-webkit-scrollbar-piece:start {
-    background: $scrollBarColor;
+    background: $scroll-bar-color;
   }
   &::-webkit-scrollbar-thumb {
     background: $landing-background-color;
@@ -238,7 +232,7 @@
   }
 
   &:hover::-webkit-scrollbar-thumb {
-    background-color: $scrollBarColor;
+    background-color: $scroll-bar-color;
   }
 }
 
@@ -247,21 +241,24 @@
   $height: 260px;
   $padding: 10px;
 
-  margin: 0;
-  list-style-type: none;
   display: table;
-  white-space: nowrap;
   height: $size;
+  list-style-type: none;
+  margin: 0;
   padding: 0 $padding;
+
+  white-space: nowrap;
 
   .event-archive-wrapper {
     display: table-cell;
-    width: $size;
     height: $height;
-    vertical-align: top;
+    opacity: .7;
+    width: $size;
     padding: 0 $padding;
 
-    opacity: .7;
+
+    vertical-align: top;
+
     transition: opacity .1s ease 0s;
 
     &:hover {
@@ -270,17 +267,17 @@
 
     .event-archive-link {
       display: block;
-      width: $size;
       height: $height;
       text-decoration: none;
+      width: $size;
     }
 
     .event-archive-flyer-wrapper {
+      border-radius: 16px;
       display: block;
-      width: $size;
       height: $size;
       overflow: hidden;
-      border-radius: 16px;
+      width: $size;
     }
 
     .event-archive-flyer {
@@ -288,12 +285,67 @@
     }
 
     .event-archive-name {
-      margin-top: 6px;
-      color: #fff;
+      color: $landing-em-color;
       font-weight: 400;
+
+      margin-top: 6px;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+}
+
+.social-links {
+  list-style-type: none;
+  margin: 0;
+
+  font-weight: bold;
+  font-size: 2em;
+
+  li {
+    display: block;
+    height: 2.4em;
+
+    line-height: 2.4em;
+
+    transition: border .1s ease 0s;
+
+    &:hover {
+      border-left: 10px solid $landing-em-color;
+    }
+
+    a {
+      display: block;
+      color: $landing-em-color;
+      padding-left: 2.4em;
+      text-decoration: none;
+    }
+  }
+
+  $icon-padding: 25px;
+
+  .social-link-twitter {
+    background: url('/images/icons/twitter.svg') center left $icon-padding no-repeat #1da1f2;
+    background-size: 1.2em;
+  }
+  .social-link-facebook {
+    background: url('/images/icons/facebook-box.svg') center left $icon-padding no-repeat #3b5998;
+    background-size: 1.2em;
+  }
+  .social-link-mixcloud {
+    background: url('/images/icons/mixcloud.svg') center left $icon-padding no-repeat #2c3f4f;
+    background-size: 1.2em;
+  }
+}
+
+.more-page-links {
+  font-size: 1.2em;
+  margin-left: 2.4em;
+  line-height: 1.8em;
+
+  @include max-width($on-palm) {
+    margin-left: 2.2em;
+    line-height: 1.6em;
   }
 }
 

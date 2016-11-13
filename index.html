@@ -1,52 +1,57 @@
 ---
 layout: landing
 title: "IMAGINE THE FLOOR. #ITF_DJ"
+redirect_from:
+  - /about.html
+  - /about/
 ---
+
+<header class="landing-header">
+  <h1 class="site-heading">
+    IMAGINE THE FLOOR.
+  </h1>
+
+  {% include social_buttons.html %}
+</header>
 
 {% if site.data.events.upcoming %}
 <div class="landing-header-wrapper landing-header-with-upcoming">
 {% else %}
 <div class="landing-header-wrapper landing-header-no-upcoming">
 {% endif %}
-  <header class="landing-header">
-    <h1>
-      <a href="/about/" class="site-logo-link">
-        <img src="/images/itfdj_logo_circle.png" alt="IMAGINE THE FLOOR." class="site-logo">
-      </a>
-    </h1>
-
-    <ul class="page-links-wrapper">
-      <li><a class="page-link" href="{{ '/about/' | prepend: site.baseurl }}">
-        IMAGINE THE FLOOR. について
-      </a></li>
-      <li><a class="page-link" href="{{ '/notes.html' | prepend: site.baseurl }}">
-        お願い・注意事項
-      </a></li>
-    </ul>
-
-    {% include social_buttons.html %}
-  </header>
-
   {% if site.data.events.upcoming %}
   <div class="heading-section heading-section-upcoming">
-      <img src="{{ site.data.events.upcoming.flyer | prepend: site.baseurl }}"
-           alt="{{ site.data.events.upcoming.name }} flyer" class="upcoming-flyer">
+    <img src="{{ site.data.events.upcoming.flyer | prepend: site.baseurl }}"
+      alt="{{ site.data.events.upcoming.name }} flyer" class="upcoming-flyer">
 
-    <a href="/about/#upcoming">
-      <div class="upcoming-ticker-wrapper">
-        <span class="upcoming-ticker">
-          <span class="upcoming-date-indicator">
-            UPCOMING: <time class="upcoming-date">{{ site.data.events.upcoming.date | date: "%Y-%m-%d" }}</time>
-          </span>
-          <div class="upcoming-name">{{ site.data.events.upcoming.name }}</div>
-        </span>
-      </div>
-    </a>
+    <div class="upcoming-ticker-wrapper">
+      <span class="upcoming-ticker">
+        <span class="upcoming-date-indicatior-tip">Upcoming</span>
+        <time class="upcoming-date">{{ site.data.events.upcoming.date | date: '%B %d, %Y' }}</time>
+        <div class="upcoming-name">{{ site.data.events.upcoming.name }}</div>
+      </span>
+    </div>
+
+    <a href="{{ site.data.events.upcoming.url }}" class="upcoming-event-url" target="_blank" rel="noopener noreferrer">Join Us</a>
   </div>
   {% endif %}
 </div>
 
-<div class="heading-section archives">
+<div class="heading-section heading-section-event-description">
+  <p>
+    フロアで出会う、新しい自分 — <em>IMAGINE THE FLOOR.</em> は、<a href="https://twitter.com/octbass_tsukuba">つくば市天久保1丁目のクラブ OctBaSS</a> で定期開催されているクラブイベントです。
+  </p>
+
+  <p>
+    クラブ初心者の人も気軽に足を運べるオールジャンルイベントです。好評につき定期イベントに昇格しました。
+  </p>
+
+  <p>
+    番外編イベントとして、つくば市天久保3丁目のピザ屋さん「ピッツェリア レガーメ」にて <em>IMAGINE THE PIZZA. #ITP_DJ</em> も行っていました。また、不定期で東京出張編も開催しています。
+  </p>
+</div>
+
+<div class="heading-section heading-section-archives">
   <h2 class="page-heading">Archives</h2>
   <div class="event-archives-wrapper">
     <ul class="event-archives">
@@ -64,8 +69,37 @@ title: "IMAGINE THE FLOOR. #ITF_DJ"
   </div>
 </div>
 
+<div class="heading-section heading-section-social-links">
+  <h2 class="page-heading">Follow Us</h2>
+  <ul class="social-links">
+    <li class="social-link-twitter">
+      <a href="https://twitter.com/@ITF_DJ">
+        @ITF_DJ
+      </a>
+    </li>
+    <li class="social-link-facebook">
+      <a href="https://facebook.com/ITFDJ">
+        Facebook
+      </a>
+    </li>
+    <li class="social-link-mixcloud">
+      <a href="https://www.mixcloud.com/ITF_DJ">
+        Mixcloud
+      </a>
+  </ul>
+</div>
+
 <div class="heading-section">
-  <h2 class="page-heading">Recent Posts</h2>
+  <h2 class="page-heading">More</h2>
+  <ul class="more-page-links">
+    <li><a href="/howtoitf.html">#ITF_DJ の楽しみ方</a></li>
+    <li><a href="/photo.html">パーティーフォト</a></li>
+    <li><a href="/notes.html">お願い・注意事項</a></li>
+  </ul>
+</div>
+
+<div class="heading-section">
+  <h2 class="page-heading">Posts</h2>
   <div class="wrapper-after-heading">
     <ul class="post-list">
       {% for post in site.posts %}

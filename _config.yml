@@ -10,3 +10,5 @@ markdown: kramdown
 redcarpet:
   extensions: ["strikethrough"]
 exclude: ["vendor", "Gemfile", "Gemfile.lock", "Makefile", "CNAME"]
+gems:
+  - jekyll-redirect-from

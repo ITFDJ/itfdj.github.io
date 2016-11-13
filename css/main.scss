@@ -1,19 +1,18 @@
 ---
 ---
-@charset "utf-8";
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "HelveticaNeue", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Segoe UI", "SegoeUI", Meiryo, Roboto, Helvetica, Arial, sans-serif;
+@charset 'utf-8';
+
+$base-font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', 'HelveticaNeue', 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', 'Segoe UI', Meiryo, Roboto, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * .875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
 $text-color:       #444;
-$background-color: #CAE7F2;
+$background-color: #cae7f2;
 $brand-color:      #e0b9f0;
-
-$landing-background-color: #010001;
 
 $grey-color:       #666;
 $grey-color-light: lighten($grey-color, 40%);
@@ -37,24 +36,4 @@ $on-laptop:        800px;
   }
 }
 
-@mixin transform($val) {
-  -o-transform: $val;
-  -ms-transform: $val;
-  -moz-transform: $val;
-  -webkit-transform: $val;
-  transform: $val;
-}
-
-@mixin filter($val) {
-  -ms-filter: $val;
-  -webkit-filter: $val;
-  filter: $val;
-}
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "base",
-  "layout",
-  "page",
-  "landing"
-;
+@import 'base', 'layout', 'page', 'landing';
