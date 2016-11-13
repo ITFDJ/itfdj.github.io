@@ -319,8 +319,8 @@ $landing-link-color: #aaf;
     }
 
     a {
-      display: block;
       color: $landing-em-color;
+      display: block;
       padding-left: 2.4em;
       text-decoration: none;
     }
@@ -344,12 +344,12 @@ $landing-link-color: #aaf;
 
 .more-page-links {
   font-size: 1.2em;
-  margin-left: 2.4em;
   line-height: 1.8em;
+  margin-left: 2.4em;
 
   @include max-width($on-palm) {
-    margin-left: 2.2em;
     line-height: 1.6em;
+    margin-left: 2.2em;
   }
 }
 
