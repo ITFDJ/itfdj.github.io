@@ -238,7 +238,7 @@ $landing-link-color: #aaf;
 
 .event-archives {
   $size: 220px;
-  $height: 260px;
+  $height: 275px;
   $padding: 10px;
 
   display: table;
@@ -291,6 +291,10 @@ $landing-link-color: #aaf;
       margin-top: 6px;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .event-archive-date {
+      font-size: .8em;
     }
   }
 }

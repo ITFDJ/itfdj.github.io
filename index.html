@@ -62,6 +62,7 @@ redirect_from:
             <img src="{{ ev.flyer | prepend: site.baseurl }}" class="event-archive-flyer">
           </div>
           <div class="event-archive-name">{{ ev.name }}</div>
+          <div class="event-archive-date">{{ ev.date | date: '%B %d, %Y' }}</div>
         </a>
       </li>
       {% endfor %}
