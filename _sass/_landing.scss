@@ -36,7 +36,11 @@ $landing-link-color: #aaf;
   color: $landing-em-color;
   font-size: 1.6em;
   font-weight: 900;
-  opacity: .7;
+
+  @include max-width($on-palm) {
+    margin-top: .2em;
+    margin-bottom: .3em;
+  }
 }
 
 .landing-header-wrapper {
@@ -167,7 +171,7 @@ $landing-link-color: #aaf;
 }
 
 .social-buttons {
-  margin: 1em 0;
+  margin: .7em 0;
 
   iframe:not(:first-child) {
     margin-left: .3em;
