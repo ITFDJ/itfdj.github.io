@@ -119,10 +119,6 @@ $landing-link-color: #aaf;
     width: 100%;
     width: 100vw;
     z-index: -100;
-
-    @include max-width($on-palm) {
-      opacity: .7;
-    }
   }
 
   a {
@@ -243,17 +239,15 @@ $landing-link-color: #aaf;
   .event-archive-wrapper {
     display: table-cell;
     height: $height;
-    opacity: .7;
     width: $size;
     padding: 0 $padding;
-
 
     vertical-align: top;
 
     transition: opacity .1s ease 0s;
 
     &:hover {
-      opacity: 1;
+      opacity: .7;
     }
 
     .event-archive-link {
