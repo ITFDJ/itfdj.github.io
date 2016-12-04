@@ -1,8 +1,8 @@
 upcoming:
-  name: vol.11.5
-  date: 2016-12-04
-  flyer: /images/flyers/vol_11_5.jpg
-  url: http://twvt.me/ITF_DJ11_5
+  name: vol.12
+  date: 2017-01-15
+  flyer: /images/flyers/vol_12.jpg
+  url: http://twvt.me/ITF_DJ12
 archives:
   - name: vol.1
     date: 2014-03-30
@@ -60,3 +60,7 @@ archives:
     date: 2016-10-09
     flyer: /images/flyers/vol_11.jpg
     archive: vol_11.html
+  - name: vol.11.5
+    date: 2016-12-04
+    flyer: /images/flyers/vol_11_5.jpg
+    archive: vol_11_5.html
