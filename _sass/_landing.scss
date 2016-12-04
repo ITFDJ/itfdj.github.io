@@ -28,7 +28,7 @@ $landing-link-color: #aaf;
   }
 
   .heading-section + .heading-section {
-    margin-top: 3.5em;
+    margin-top: 1.8em;
   }
 }
 
@@ -48,8 +48,6 @@ $landing-link-color: #aaf;
 
   min-height: 600px;
   overflow: hidden;
-
-  padding: 2em 1.5em 0;
 
   position: relative;
 
@@ -110,17 +108,9 @@ $landing-link-color: #aaf;
 }
 
 .heading-section-upcoming {
-  background-color: rgba(0, 0, 0, .4);
-
-  display: inline-block;
-
-  margin-left: -2em;
-
   @include max-width($on-palm) {
     margin-right: -2em;
   }
-
-  padding: 0 2em;
 
   .upcoming-flyer {
     left: 0;
@@ -140,13 +130,23 @@ $landing-link-color: #aaf;
   }
 
   .upcoming-ticker-wrapper {
+    background-color: rgba(0, 0, 0, .4);
+    display: block;
     color: $landing-em-color;
     font-size: 3em;
     font-weight: 900;
-    margin-top: .4em;
+    padding: .3em .8em .4em;
+
+    text-decoration: none;
+
+    transition: background-color .2s ease 0s;
 
     @include max-width($on-palm) {
       font-size: 1.7em;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .8);
     }
   }
 
@@ -167,33 +167,6 @@ $landing-link-color: #aaf;
   .upcoming-name {
     font-size: 1.3em;
     line-height: .75em;
-  }
-
-  .upcoming-event-url {
-    color: $landing-em-color;
-    display: inline-block;
-    font-size: 1.6em;
-    font-variant: small-caps;
-    font-weight: bold;
-    margin: .7em 0;
-
-    @include max-width($on-palm) {
-      margin: .4em 0;
-    }
-  }
-}
-
-.heading-section-event-description {
-  color: $landing-meta-color;
-
-  padding: 0 1em;
-
-  p {
-    margin: .4em 0;
-
-    @include max-width($on-palm) {
-      font-size: .8em;
-    }
   }
 }
 
@@ -233,6 +206,24 @@ $landing-link-color: #aaf;
 
   &:hover::-webkit-scrollbar-thumb {
     background-color: $scroll-bar-color;
+  }
+}
+
+.heading-section-event-description {
+  color: $landing-meta-color;
+  padding: 0 1em;
+  margin-bottom: 1.2em;
+
+
+  p {
+    font-size: .8em;
+    margin: .4em 0;
+    text-align: center;
+
+    @include max-width($on-palm) {
+      text-align: inherit;
+      margin: .5em 0;
+    }
   }
 }
 
